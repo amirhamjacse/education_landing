@@ -1,0 +1,59 @@
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Django-specific files
+*.log
+*.pot
+*.pyc
+*.swp
+*.swo
+*.bak
+*.sublime-workspace
+*.sublime-project
+
+# Environment files
+.env
+.env.*
+*.env
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Database files
+db.sqlite3
+*.sqlite3
+
+# Media files (Django media folder)
+media/
+
+# Static files (Django static folder)
+static/
+
+# Django migrations
+*/migrations/*
+
+# IDEs and editors
+.idea/
+.vscode/
+
+# MacOS Finder files
+.DS_Store
+
+# Python coverage and test files
+.coverage
+nosetests.xml
+coverage.xml
+*.cover
+
+# Other files
+*.pot
+*.mo
