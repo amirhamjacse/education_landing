@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,9 +40,19 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'educationsms',
     'widget_tweaks',
-    
+    'import_export',
     # 'education',
 ]
+
+JAZZMIN_SETTINGS = {
+    "site_title": "Education",
+    "site_header": "My Site Admin Dashboard",
+    "site_brand": "Hamja",
+    "welcome_sign": "Welcome to the Admin Dashboard",
+    "search_model": "auth.User",
+    # You can add more customization options here as needed
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
