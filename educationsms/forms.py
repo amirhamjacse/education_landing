@@ -5,7 +5,15 @@ class StudentInfoForm(forms.ModelForm):
     class Meta:
         model = StudentsInformation
         fields = (
-            # 'name',
-            # 'fathers_name',
-            # 'mothers_name',
+            'first_name',
+            'last_name',
+            'fathers_name',
+            'mothers_name',
+            'phone_number',
+            'school',
+            'district',
+            'thana',
+            'upazila',
+            'email_address',
+            'has_computer_laptop',
             )
