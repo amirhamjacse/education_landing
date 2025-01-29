@@ -212,7 +212,8 @@
               <div class="col-lg-3 col-md-6 mb-4">
                 <div class="author-card">
                   {% comment %} {{teacher.picture.url }} {% endcomment %}
-                  <img src="{{ teacher.picture.url }}" alt="{{ teacher.name }}" class="author-image rounded-circle mb-3">
+                  
+                  <img src="{% if teacher.picture %} {{ teacher.picture.url }} {% endif %} " alt="{{ teacher.name }}" class="author-image rounded-circle mb-3">
                   <h5>{{ teacher.name }}</h5>
                   <p class="education">{{ teacher.degree }}</p>
                   <p class="other-info">{{ teacher.other_info }}</p>
