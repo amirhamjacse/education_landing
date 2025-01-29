@@ -204,24 +204,23 @@
         <!--banner section end -->
         </div>
 
-
-
-          
         <h1 class="services_taital" style="padding-top: 50px; padding-bottom: 40px;"><span style="color: #fcce2d">Our</span> Teachers</h1>
-
-       <section id="author-group" class="container">
-         <div class="row text-center">
-           <!-- Author 1 -->
-           <div class="col-lg-3 col-md-6 mb-4">
-             <div class="author-card">
-               <img src="{% static 'images/teacher.png' %}" alt="Author 1" class="author-image rounded-circle mb-3">
-               <h5>Author Name 1</h5>
-               <p class="education">BSc in Computer Science</p>
-               <p class="other-info">Some additional info about the author.</p>
-             </div>
-           </div>
+        <section id="author-group" class="container">
+           <div class="row text-center">
+              <!-- Author 1 -->
+              {% for teacher in teachers %}
+              <div class="col-lg-3 col-md-6 mb-4">
+                <div class="author-card">
+                  {% comment %} {{teacher.picture.url }} {% endcomment %}
+                  <img src="{{ teacher.picture.url }}" alt="{{ teacher.name }}" class="author-image rounded-circle mb-3">
+                  <h5>{{ teacher.name }}</h5>
+                  <p class="education">{{ teacher.degree }}</p>
+                  <p class="other-info">{{ teacher.other_info }}</p>
+                </div>
+              </div>
+            {% endfor %}
            <!-- Author 2 -->
-           <div class="col-lg-3 col-md-6 mb-4">
+           {% comment %} <div class="col-lg-3 col-md-6 mb-4">
              <div class="author-card">
                <img src="{% static 'images/teacher.png' %}" alt="Author 2" class="author-image rounded-circle mb-3">
                <h5>Author Name 2</h5>
@@ -246,7 +245,7 @@
                <p class="other-info">Some additional info about the author.</p>
              </div>
            </div>
-         </div>
+         </div> {% endcomment %}
     </section>
 
 

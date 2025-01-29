@@ -1,7 +1,9 @@
 from django.contrib import admin
 from .models import StudentsInformation
+from .models import TeacherInfo
 # Register your models here.
 from import_export.admin import ExportMixin
+
 
 @admin.register(StudentsInformation)
 class StudentsInformationAdmin(ExportMixin, admin.ModelAdmin):
@@ -21,3 +23,13 @@ class StudentsInformationAdmin(ExportMixin, admin.ModelAdmin):
 
     search_fields = ('first_name',)
     export_fields = ('first_name', 'last_name', 'fathers_name', 'mothers_name', 'phone_number')
+
+
+@admin.register(TeacherInfo)
+class TeacherInformationAdmin(ExportMixin, admin.ModelAdmin):
+    list_display = (
+                'name',
+                'degree',
+                'sort',
+                'other_info',
+            )
