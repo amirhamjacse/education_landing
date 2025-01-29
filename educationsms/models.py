@@ -51,7 +51,7 @@ class TeacherInfo(models.Model):
     degree = models.CharField(max_length=255, blank=True, null=True)
     sort = models.CharField(max_length=255, blank=True, null=True)
     picture = models.FileField(upload_to='teachers/', null=True, blank=True)
-    tpicture = models.ImageField(upload_to='teacherspic/', null=True, blank=True)
+    # tpicture = models.ImageField(upload_to='teacherspic/', null=True, blank=True)
     # picture = models.ImageField(, null=True, blank=True)  # Use ImageField
     other_info = models.CharField(max_length=255, blank=True, null=True)
     # phone_regex = RegexValidator(
