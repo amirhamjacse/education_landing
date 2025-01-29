@@ -33,6 +33,59 @@
       <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
       <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+      <style>
+         #author-group .author-marquee {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+          }
+          
+          #author-group .author-card {
+            display: inline-block;
+            margin-right: 30px; /* Space between authors */
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+          }
+          
+          #author-group .author-image {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+          }
+          
+          #author-group h5 {
+            font-size: 1.2rem;
+            font-weight: bold;
+          }
+          
+          #author-group .education {
+            font-size: 1rem;
+            color: #6c757d;
+          }
+          
+          #author-group .other-info {
+            font-size: 0.9rem;
+            color: #495057;
+          }
+          
+          @keyframes marquee {
+            0% {
+              transform: translateX(100%);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
+          }
+          </style>
+
+
    </head>
    <body>
 
@@ -50,7 +103,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                        <ul class="navbar-nav mr-auto">
                           <li class="nav-item active">
-                             <a class="nav-link" href=" {% url "landing_page" %} ">Home</a>
+                             {% comment %} <a class="nav-link" href=" {% url "landing_page" %} ">Home</a> {% endcomment %}
                           </li>
                           {% comment %} <li class="nav-item">
                              <a class="nav-link" href="about.html">About</a>
@@ -66,13 +119,13 @@
                           </li> {% endcomment %}
                        </ul>
                        <div class="call_section">
-                          <ul>
+                          {% comment %} <ul>
                              <li><a href="#"><img src="{% static 'images/fb-icon.png' %}"></a></li>
                              <li><a href="#"><img src="{% static 'images/twitter-icon.png' %}"></a></li>
                              <li><a href="#"><img src="{% static 'images/linkedin-icon.png' %}"></a></li>
-                             <li><a href="#"><img src="{% static 'images/instagram-icon.png' %}"></a></li>
+                             <li><a href="#"><img src="{% static 'images/instagram-icon.png' %}"></a></li> {% endcomment %}
                              {% comment %} <div class="donate_bt"><a href="#"><img src="{% static 'images/search-icon.png' %}"></a></div> {% endcomment %}
-                          </ul>
+                          {% comment %} </ul> {% endcomment %}
                        </div>
                     </div>
                  </nav>
@@ -90,8 +143,8 @@
                                 <h1 class="banner_taital">Casinal Educations Coachings</h1>
                                 <p class="banner_text">Eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                                 <div class="btn_main">
-                                   <div class="about_bt active"><a href="{% url "registration_page" %} ">Registration</a></div>
-                                   <div class="quote_bt"><a href="#">Free class</a></div>
+                                   <div class="about_bt "><a href="{% url "registration_page" %} ">Registration</a></div>
+                                   {% comment %} <div class="quote_bt active"><a href="#">Free class</a></div> {% endcomment %}
                                 </div>
                              </div>
                              <div class="col-md-6">
@@ -109,8 +162,8 @@
                                 <h1 class="banner_taital">Casinal Educations Coachings</h1>
                                 <p class="banner_text">Eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                                 <div class="btn_main">
-                                    <div class="about_bt active"><a href="#">Registration</a></div>
-                                    <div class="quote_bt"><a href="#">Free class</a></div>
+                                    <div class="about_bt "><a href="#">Registration</a></div>
+                                    {% comment %} <div class="quote_bt active"><a href="#">Free class</a></div> {% endcomment %}
                                 </div>
                              </div>
                              <div class="col-md-6">
@@ -120,7 +173,7 @@
                        </div>
                     </div>
                  </div>
-                 <div class="carousel-item">
+                 {% comment %} <div class="carousel-item">
                     <div class="container">
                        <div class="banner_taital_main">
                           <div class="row">
@@ -138,7 +191,7 @@
                           </div>
                        </div>
                     </div>
-                 </div>
+                 </div> {% endcomment %}
               </div>
               <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
               <i class="fa fa-arrow-left" style="font-size:24px"></i>
@@ -150,9 +203,71 @@
         </div>
         <!--banner section end -->
         </div>
+
+
+
+          
+        <h1 class="services_taital" style="padding-top: 50px; padding-bottom: 40px;"><span style="color: #fcce2d">Our</span> Teachers</h1>
+
+       <section id="author-group" class="container">
+         <div class="row text-center">
+           <!-- Author 1 -->
+           <div class="col-lg-3 col-md-6 mb-4">
+             <div class="author-card">
+               <img src="{% static 'images/img-2.png' %}" alt="Author 1" class="author-image rounded-circle mb-3">
+               <h5>Author Name 1</h5>
+               <p class="education">BSc in Computer Science</p>
+               <p class="other-info">Some additional info about the author.</p>
+             </div>
+           </div>
+           <!-- Author 2 -->
+           <div class="col-lg-3 col-md-6 mb-4">
+             <div class="author-card">
+               <img src="{% static 'images/img-2.png' %}" alt="Author 2" class="author-image rounded-circle mb-3">
+               <h5>Author Name 2</h5>
+               <p class="education">MSc in Software Engineering</p>
+               <p class="other-info">Some additional info about the author.</p>
+             </div>
+           </div>
+           <!-- Author 3 -->
+           <div class="col-lg-3 col-md-6 mb-4">
+             <div class="author-card">
+               <img src="{% static 'images/img-2.png' %}" alt="Author 3" class="author-image rounded-circle mb-3">
+               <h5>Author Name 3</h5>
+               <p class="education">PhD in Artificial Intelligence</p>
+               <p class="other-info">Some additional info about the author.</p>
+             </div>
+           </div>
+           <div class="col-lg-3 col-md-6 mb-4">
+             <div class="author-card">
+               <img src="{% static 'images/img-2.png' %}" alt="Author 3" class="author-image rounded-circle mb-3">
+               <h5>Author Name 3</h5>
+               <p class="education">PhD in Artificial Intelligence</p>
+               <p class="other-info">Some additional info about the author.</p>
+             </div>
+           </div>
+         </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!--header section end -->
         <!-- services section start -->
-        <div class="services_section layout_padding" style="padding-bottom: 50px;">
+        {% comment %} <div class="services_section layout_padding" style="padding-bottom: 50px;">
            <div class="container">
               <h1 class="services_taital"><span style="color: #fcce2d">Our</span> Courses</h1>
               <div class="services_section_2">
@@ -194,7 +309,7 @@
                  </div>
               </div>
            </div>            
-        </div>
+        </div> {% endcomment %}
         <!-- services section end -->
         <!-- about section start -->
         {% comment %} <div class="news_section layout_padding">
@@ -294,12 +409,12 @@
         <div class="footer_section layout_padding">
            <div class="container text-light">
               <div class="row">
-                 <div class="col-md-3 text-light">
+                 <div class="col-md-6 text-light">
                     <h1 class="text-light"><b>Codec</b></h1>
                     {% comment %} <a class="logo" href="#"><img src="{% static 'images/footer-logo.png' %}"></a> {% endcomment %}
                     <p class="footer_text">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                  </div>
-                 <div class="col-md-3">
+                 {% comment %} <div class="col-md-3">
                     <h2 class="footer_taital text-light">Quick Links</h2>
                     <ul class="footer_links">
                        <li><a class="text-light" href="#">Home</a></li>
@@ -316,9 +431,9 @@
                        <li><a class="text-light" href="#">Terms of Use</a></li>
                        <li><a class="text-light" href="#">Privacy Policy</a></li>
                     </ul>
-                 </div>
-                 <div class="col-md-3">
-                    <h2 class="footer_taital ">Contact Info</h2>
+                 </div> {% endcomment %}
+                 <div class="col-md-6 text-right">
+                    <h2 class="footer_taital text-light ">Contact Info</h2>
                     <ul class="footer_links">
                        <li><a class="text-light" href="#">+1234567890</a></li>
                        <li><a class="text-light" href="#">info@yourdomain.com</a></li>

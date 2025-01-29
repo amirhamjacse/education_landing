@@ -80,10 +80,10 @@
                        </ul>
                        <div class="call_section">
                           <ul>
-                             <li><a href="#"><img src="{% static 'images/fb-icon.png' %}"></a></li>
+                             {% comment %} <li><a href="#"><img src="{% static 'images/fb-icon.png' %}"></a></li>
                              <li><a href="#"><img src="{% static 'images/twitter-icon.png' %}"></a></li>
                              <li><a href="#"><img src="{% static 'images/linkedin-icon.png' %}"></a></li>
-                             <li><a href="#"><img src="{% static 'images/instagram-icon.png' %}"></a></li>
+                             <li><a href="#"><img src="{% static 'images/instagram-icon.png' %}"></a></li> {% endcomment %}
                              {% comment %} <div class="donate_bt"><a href="#"><img src="{% static 'images/search-icon.png' %}"></a></div> {% endcomment %}
                           </ul>
                        </div>
@@ -230,12 +230,12 @@
         <div class="footer_section layout_padding">
            <div class="container text-light">
               <div class="row">
-                 <div class="col-md-3 text-light">
+                 <div class="col-md-6 text-light">
                     <h1 class="text-light"><b>Codec</b></h1>
                     {% comment %} <a class="logo" href="#"><img src="{% static 'images/footer-logo.png' %}"></a> {% endcomment %}
                     <p class="footer_text">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                  </div>
-                 <div class="col-md-3">
+                 {% comment %} <div class="col-md-6">
                     <h2 class="footer_taital text-light">Quick Links</h2>
                     <ul class="footer_links">
                        <li><a class="text-light" href="#">Home</a></li>
@@ -252,8 +252,8 @@
                        <li><a class="text-light" href="#">Terms of Use</a></li>
                        <li><a class="text-light" href="#">Privacy Policy</a></li>
                     </ul>
-                 </div>
-                 <div class="col-md-3">
+                 </div> {% endcomment %}
+                 <div class="col-md-6 text-right">
                     <h2 class="footer_taital text-light">Contact Info</h2>
                     <ul class="footer_links">
                        <li><a class="text-light" href="#">+1234567890</a></li>
