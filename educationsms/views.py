@@ -39,3 +39,61 @@ class RegistrationView(View):
             messages.error(request, "Please correct the errors below.")
         context = {'form': form}
         return render(request, self.template, context)
+
+
+
+import openpyxl
+from django.http import HttpResponse
+from .models import StudentsInformation
+
+def export_students(request):
+    # Fetch all student records
+    students = StudentsInformation.objects.all()
+
+    # Create a new workbook and worksheet
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "Students"
+
+    # Define the headers
+    headers = [
+        'First Name', 
+        'Last Name', 
+        'Father\'s Name', 
+        'Mother\'s Name', 
+        'Phone Number', 
+        'School', 
+        'District', 
+        'Thana', 
+        'Upazila', 
+        'Email Address', 
+        'Has Computer/Laptop'
+    ]
+    ws.append(headers)
+
+    # Write student data to the worksheet
+    for student in students:
+        row = [
+            student.first_name,
+            student.last_name,
+            student.fathers_name,
+            student.mothers_name,
+            student.phone_number,
+            student.school,
+            student.district,
+            student.thana,
+            student.upazila,
+            student.email_address,
+            student.has_computer_laptop
+        ]
+        ws.append(row)
+
+    # Set up the response for the Excel file
+    response = HttpResponse(
+        content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+    )
+    response['Content-Disposition'] = 'attachment; filename=students.xlsx'
+
+    # Save the workbook to the response object
+    wb.save(response)
+    return response
