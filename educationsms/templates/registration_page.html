@@ -99,7 +99,22 @@
            <div class="container">
             {% comment %} {{form.as_p}} {% endcomment %}
               <h1 class="services_taital"><span style="color: #fcce2d">Registration </h1>
-              <div class="services_section_2">
+                
+                <div class="services_section_2">
+                  {% if form.errors %}
+                  <div class="alert alert-danger">
+                      <ul>
+                          {% for field, errors in form.errors.items %}
+                              <li><strong>{{ field }}</strong>: {{ errors|join:", " }}</li>
+                          {% endfor %}
+                      </ul>
+                  </div>
+              {% endif %}
+              {% if messages %}
+                  {% for message in messages %}
+                      <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                  {% endfor %}
+              {% endif %}
                <div class="container mt-4">
                   <form method="post" action="">
                       {% csrf_token %}
