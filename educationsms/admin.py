@@ -84,12 +84,12 @@ def export_students(modeladmin, request, queryset):
     headers = [
         'First Name', 
         'Last Name', 
-        'Father\'s Name', 
-        'Mother\'s Name', 
+        # 'Father\'s Name', 
+        # 'Mother\'s Name', 
         'Phone Number', 
         'School', 
         'District', 
-        'Thana', 
+        # 'Thana', 
         'Upazila', 
         'Email Address', 
         'Has Computer/Laptop'
@@ -130,7 +130,7 @@ class StudentsInformationAdmin(admin.ModelAdmin):
     list_display = (
         'first_name', 'last_name', 'fathers_name', 'mothers_name', 
         'phone_number', 'school', 'district', 'thana', 'upazila', 
-        'email_address', 'has_computer_laptop'
+        'email_address', 'has_computer_laptop', 'can_manage_laptop',
     )
     search_fields = ('first_name',)
     

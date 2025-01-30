@@ -36,6 +36,7 @@ class StudentsInformation(models.Model):
 
     # Boolean field for computer/laptop ownership
     has_computer_laptop = models.BooleanField(default=False)
+    can_manage_laptop = models.BooleanField(default=False)
 
     # Function to return the full name
     def full_name(self):
