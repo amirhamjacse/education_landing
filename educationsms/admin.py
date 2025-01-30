@@ -90,9 +90,10 @@ def export_students(modeladmin, request, queryset):
         'School', 
         'District', 
         # 'Thana', 
-        'Upazila', 
+        'Upazila/Thana', 
         'Email Address', 
-        'Has Computer/Laptop'
+        'Has Computer/Laptop',
+        'Can Manage Laptop/Computer',
     ]
     ws.append(headers)
 
@@ -101,15 +102,16 @@ def export_students(modeladmin, request, queryset):
         row = [
             student.first_name,
             student.last_name,
-            student.fathers_name,
-            student.mothers_name,
+            # student.fathers_name,
+            # student.mothers_name,
             student.phone_number,
             student.school,
             student.district,
-            student.thana,
+            # student.thana,
             student.upazila,
             student.email_address,
-            'Yes' if student.has_computer_laptop else 'No'  # Convert True/False to Yes/No
+            'Yes' if student.has_computer_laptop else 'No',  # Convert True/False to Yes/No
+            'Yes' if student.can_manage_laptop else 'No'  # Convert True/False to Yes/No
         ]
         ws.append(row)
 
@@ -117,7 +119,7 @@ def export_students(modeladmin, request, queryset):
     response = HttpResponse(
         content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
     )
-    response['Content-Disposition'] = 'attachment; filename=students.xlsx'
+    response['Content-Disposition'] = 'attachment; filename=students_information.xlsx'
 
     # Save the workbook to the response object
     wb.save(response)
@@ -128,8 +130,8 @@ def export_students(modeladmin, request, queryset):
 @admin.register(StudentsInformation)
 class StudentsInformationAdmin(admin.ModelAdmin):
     list_display = (
-        'first_name', 'last_name', 'fathers_name', 'mothers_name', 
-        'phone_number', 'school', 'district', 'thana', 'upazila', 
+        'first_name', 'last_name', 
+        'phone_number', 'school', 'district', 'upazila', 
         'email_address', 'has_computer_laptop', 'can_manage_laptop',
     )
     search_fields = ('first_name',)

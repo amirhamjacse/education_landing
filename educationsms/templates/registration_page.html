@@ -186,8 +186,8 @@
                           <!-- Thana -->
                           <div class="col-md-6">
                               <div class="mb-3">
-                                  <label for="thana" class="form-label">Thana/Upazila</label>
-                                  {{ form.thana|add_class:"form-control" }}
+                                  <label for="upazila" class="form-label">Thana/Upazila</label>
+                                  {{ form.upazila|add_class:"form-control" }}
                               </div>
                           </div>
               
@@ -208,7 +208,16 @@
                                    Do you have a computer or laptop? (If yes mark it)
                                </label>
                            </div>
-                       </div>
+                        </div>
+                        <div class="col-md-6">
+                         <div class="mb-3 form-check">
+                             <!-- Checkbox Field -->
+                             {{ form.can_manage_laptop|add_class:"form-check-input custom-checkbox" }}
+                             <label for="id_has_computer_laptops" class="form-check-label">
+                                 I can manage laptop
+                             </label>
+                         </div>
+                         </div>
               
                           <!-- Submit Button -->
                           <div class="col-12 text-end">
