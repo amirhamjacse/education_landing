@@ -1,3 +1,5 @@
+import openpyxl
+from django.http import HttpResponse
 from django.contrib import admin
 from .models import StudentsInformation
 from .models import TeacherInfo
@@ -67,10 +69,6 @@ class TeacherInformationAdmin(ExportMixin, admin.ModelAdmin):
 # admin.site.register(StudentsInformation, StudentsInformationAdmin)
 
 
-import openpyxl
-from django.http import HttpResponse
-from django.contrib import admin
-from .models import StudentsInformation
 
 
 # Function to export students to an Excel file

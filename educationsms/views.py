@@ -34,7 +34,7 @@ class RegistrationView(View):
             messages.success(request, "Student information saved successfully!")
             form = StudentInfoForm()
             context = {'form': form}
-            return render(request, self.template, context)
+            return render(request, 'success_page.html', context)
         else:
             messages.error(request, "Please correct the errors below.")
         context = {'form': form}
