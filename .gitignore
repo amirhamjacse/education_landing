@@ -36,7 +36,7 @@ db.sqlite3
 media/
 
 # Static files (Django static folder)
-static/
+# static/
 
 # Django migrations
 */migrations/*
