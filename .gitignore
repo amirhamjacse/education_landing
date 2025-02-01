@@ -39,7 +39,7 @@ media/
 # static/
 
 # Django migrations
-*/migrations/*
+# */migrations/*
 
 # IDEs and editors
 .idea/
