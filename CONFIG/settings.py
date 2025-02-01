@@ -92,6 +92,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'CONFIG.wsgi.application'
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',  # Use PostgreSQL engine
+        'NAME': 'deepacademyregdb',  # Database name
+        'USER': 'deepacademy',  # Database user
+        'PASSWORD': 'deep123#',  # Password for the user
+        'HOST': 'localhost',  # Assuming the database is on the same machine
+        'PORT': '5432',  # Default PostgreSQL port
+    }
+}
+
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
