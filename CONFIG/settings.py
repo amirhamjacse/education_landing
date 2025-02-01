@@ -173,9 +173,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Add this if it's not already there
+# The directory where static files will be collected
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# The directories where Django will look for static files
 STATICFILES_DIRS = [
-    BASE_DIR / "static",  # Or wherever your static files are located
+    BASE_DIR / 'static',  # This is where your local static files are located
 ]
 
 

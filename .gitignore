@@ -38,6 +38,8 @@ media/
 # Static files (Django static folder)
 # static/
 
+staticfiles/
+
 # Django migrations
 # */migrations/*
 
