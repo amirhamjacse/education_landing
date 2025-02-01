@@ -1,0 +1,13 @@
+asgiref==3.8.1
+diff-match-patch
+Django
+django-import-export
+django-jazzmin
+django-widget-tweaks
+et_xmlfile
+openpyxl
+pillow
+python-dotenv
+sqlparse
+tablib
+typing_extensions
