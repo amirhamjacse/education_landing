@@ -125,6 +125,43 @@
          #programs i {
             color: #007bff; /* Consistent blue color for icons */
          }
+
+
+         .program-section {
+            padding: 60px 0;
+        }
+        .program-box {
+            display: flex;
+            align-items: start;
+            {% comment %} background: #fff; {% endcomment %}
+            padding: 20px;
+            border-radius: 10px;
+            {% comment %} box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); {% endcomment %}
+            {% comment %} transition: transform 0.3s ease-in-out; {% endcomment %}
+        }
+        .program-box:hover {
+            transform: translateY(-5px);
+        }
+        .icon-box {
+            font-size: 36px;
+            color: #dc3545;
+            margin-right: 15px;
+        }
+        .program-content h4 {
+            font-weight: bold;
+            color: #333;
+        }
+        .program-content h3 {
+            font-weight: bold;
+            color: #333;
+        }
+        .program-content p {
+            color: #666;
+            font-size: 14px;
+        }
+        table td {
+            color: black;
+        }
          
       </style>
    </head>
@@ -139,9 +176,9 @@
                     {% comment %} <b>ডিপ মাইন্ড স্কুল</b> {% endcomment %}
                  </h1>
                  
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                  {% comment %} <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                      <span class="navbar-toggler-icon"></span>
-                  </button>
+                  </button> {% endcomment %}
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                      <ul class="navbar-nav mr-auto">
                         {% if request.path != '/' %}
