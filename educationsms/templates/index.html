@@ -33,8 +33,32 @@
       <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
       <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
 
       <style>
+         @font-face {
+            font-family: bangla;
+            src: url({% static 'font/SolaimanLipi.ttf' %}); 
+        }
+
+        .bangla{
+            font-family: bangla;
+        }
+        @font-face {
+         font-family: bangla1;
+         src: url({% static 'font/AdorNoirrit.ttf' %}); 
+         }
+         .bangla1{
+            font-family: bangla1;
+         }
+         @font-face {
+            font-family: bangla2;
+            src: url({% static 'font/Ashalota.ttf' %}); 
+            }
+            .bangla2{
+               font-family: bangla2;
+         }
          #author-group .author-marquee {
             display: flex;
             overflow-x: auto;
@@ -95,7 +119,7 @@
            <div class="header_bg">
               <div class="container">
                  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <h1><b>Learning School</b></h1>
+                    <h1 class="bangla"><b>ডিপ মাইন্ড স্কুল</b></h1>
                     {% comment %} <a class="logo" href="index.html"><img src="{% static 'images/logo.png' %}"></a> {% endcomment %}
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -119,17 +143,26 @@
            </div>
         <!--banner section start -->
         <div class="banner_section layout_padding">
-           <div id="my_slider" class="carousel slide" data-ride="carousel">
+           {% comment %} <div id="my_slider" class="carousel slide" data-ride="carousel"> {% endcomment %}
               <div class="carousel-inner">
                  <div class="carousel-item active">
                     <div class="container">
                        <div class="banner_taital_main">
                           <div class="row">
                              <div class="col-md-6">
-                                <h1 class="banner_taital">Casinal Educations Coachings</h1>
-                                <p class="banner_text">Eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                <h1 class="text-light bangla1">ক্লাস নাইন থেকেই আইসিটি সাবজেক্টে ভালো করতে যুক্ত হও সেরা সফটওয়্যার ইঞ্জিনিয়ার ও কম্পিউটার গ্রাফিকস ডিজাইনারদের সাথে 
+                                 শুধুমাত্র একাডেমিক রেজাল্ট নয়
+                                 প্রোগ্রামিং ও গ্রাফিকসে তোমার শক্ত ভিত গড়ে উঠবে এদের হাত ধরেই। 
+                                 এক অভূতপূর্ব জার্নি অপেক্ষা করছে তোমার জন্য, ক্লিক করো এখনই...</h1> 
+                                  
+                                 <ul class="mt-3 text-light bangla" style="font-size: 16px">
+                                    <li><i class="bi bi-arrow-right"></i> অনলাইন ক্লাস</li>
+                                    <li><i class="bi bi-arrow-right"></i> যাদের ল্যাপটপ/ কম্পিউটার নেই তারাও জানাও।</li>
+                                    <li><i class="bi bi-arrow-right"></i> তোমার যদি মন প্রোগ্রামিংয়ে ক্যারিয়ার গড়তে উন্মুখ থাকে তবে এটা কোন বাধাই নয়।</li>
+                                    <li><i class="bi bi-arrow-right"></i> যাদের আর্থিক সংগতি নেই কিন্তু ডিপ বিউটিফুল মাইন্ড আছে তারাও জানাও।</li>
+                                </ul>
                                 <div class="btn_main">
-                                   <div class="about_bt "><a href="{% url "registration_page" %} ">Registration</a></div>
+                                   <div class="about_bt bangla2"><a href="{% url "registration_page" %} ">রেজিস্ট্রেশন</a></div>
                                    {% comment %} <div class="quote_bt active"><a href="#">Free class</a></div> {% endcomment %}
                                 </div>
                              </div>
@@ -140,7 +173,7 @@
                        </div>
                     </div>
                  </div>
-                 <div class="carousel-item">
+                 {% comment %} <div class="carousel-item">
                     <div class="container">
                        <div class="banner_taital_main">
                           <div class="row">
@@ -149,7 +182,6 @@
                                 <p class="banner_text">Eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                                 <div class="btn_main">
                                     <div class="about_bt "><a href="{% url "registration_page" %} ">Registration</a></div>
-                                    {% comment %} <div class="quote_bt active"><a href="#">Free class</a></div> {% endcomment %}
                                 </div>
                              </div>
                              <div class="col-md-6">
@@ -158,23 +190,23 @@
                           </div>
                        </div>
                     </div>
-                 </div>
+                 </div> {% endcomment %}
                
      
               </div>
-              <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+              {% comment %} <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
               <i class="fa fa-arrow-left" style="font-size:24px"></i>
               </a>
               <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
               <i class="fa fa-arrow-right" style="font-size:24px"></i>
-              </a>
-           </div>
+              </a> {% endcomment %}
+           {% comment %} </div> {% endcomment %}
         </div>
         <!--banner section end -->
         </div>
 
         {% if teachers %}
-        <h1 class="services_taital" style="padding-top: 50px; padding-bottom: 40px;"><span style="color: #fcce2d">Our</span> Teachers</h1>
+        <h1 class="services_taital bangla2" style="padding-top: 50px; padding-bottom: 40px;"><span style="color:rgb(1, 0, 9)">আমাদের </span> শিক্ষকগণ</h1>
         <section id="author-group" class="container">
            <div class="row text-center">
               <!-- Author 1 -->
@@ -184,9 +216,9 @@
                   {% comment %} {{teacher.picture.url }} {% endcomment %}
                   
                   <img src="{% if teacher.picture %} {{ teacher.picture.url }} {% endif %} " alt="{{ teacher.name }}" class="author-image rounded-circle mb-3">
-                  <h5>{{ teacher.name }}</h5>
-                  <p class="education">{{ teacher.degree }}</p>
-                  <p class="other-info">{{ teacher.other_info }}</p>
+                  <h5 class="bangla1">{{ teacher.name }}</h5>
+                  <p class="education bangla">{{ teacher.degree }}</p>
+                  <p class="other-info bangla">{{ teacher.other_info }}</p>
                 </div>
               </div>
             {% endfor %}
@@ -200,13 +232,13 @@
            <div class="container text-light">
               <div class="row">
                  <div class="col-md-6 text-light">
-                    <h1 class="text-light"><b>Learning School</b></h1>
+                    <h1 class="text-light bangla"><b>ডিপ মাইন্ড স্কুল</b></h1>
                     {% comment %} <a class="logo" href="#"><img src="{% static 'images/footer-logo.png' %}"></a> {% endcomment %}
                     <p class="footer_text">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                  </div>
                  
                  <div class="col-md-6 text-right">
-                    <h2 class="footer_taital text-light ">Contact Info</h2>
+                    <h2 class="footer_taital text-light bangla">যোগাযোগ</h2>
                     <ul class="footer_links">
                        <li><a class="text-light" href="#">+1234567890</a></li>
                        <li><a class="text-light" href="#">info@yourdomain.com</a></li>

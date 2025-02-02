@@ -445,14 +445,14 @@ button {
     font-size: 40px;
     color: #170e09;
     text-align: center;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .services_taital::after {
     content: '';
     position: relative;
     width: 40px;
     height: 17px;
-    background-color: #fcce2d;
+    background-color: #000000;
     left: 0px;
     right: 0px;
     margin: 0 auto;
