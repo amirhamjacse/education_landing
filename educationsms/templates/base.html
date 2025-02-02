@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>{% block title %}Learning Platform{% endblock %}</title>
+      <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+      <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+      <style>
+         @font-face { font-family: bangla; src: url({% static 'font/SolaimanLipi.ttf' %}); }
+         .bangla { font-family: bangla; }
+         @font-face { font-family: bangla1; src: url({% static 'font/AdorNoirrit.ttf' %}); }
+         .bangla1 { font-family: bangla1; }
+         @font-face { font-family: bangla2; src: url({% static 'font/Ashalota.ttf' %}); }
+         .bangla2 { font-family: bangla2; }
+         #author-group .author-marquee {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+          }
+          
+          #author-group .author-card {
+            display: inline-block;
+            margin-right: 30px; /* Space between authors */
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+          }
+          
+          #author-group .author-image {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+          }
+          
+          #author-group h5 {
+            font-size: 1.2rem;
+            font-weight: bold;
+          }
+          
+          #author-group .education {
+            font-size: 1rem;
+            color: #6c757d;
+          }
+          
+          #author-group .other-info {
+            font-size: 0.9rem;
+            color: #495057;
+          }
+          
+          @keyframes marquee {
+            0% {
+              transform: translateX(100%);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
+          }
+          .custom-checkbox {
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+        .custom-checkbox + .form-check-label {
+            font-size: 1.2rem;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+      </style>
+   </head>
+   <body>
+      <div class="header_section">
+         <div class="header_bg">
+            <div class="container">
+               <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+                  <h1 class="bangla"><b>ডিপ মাইন্ড স্কুল</b></h1>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                     <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                     <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                           {% comment %} <a class="nav-link" href="{% url 'index' %}">Home</a> {% endcomment %}
+                        </li>
+                     </ul>
+                  </div>
+               </nav>
+            </div>
+         </div>
+      </div>
+      {% block content %}{% endblock %}
+      <div class="footer_section layout_padding">
+         <div class="container text-light">
+            <div class="row">
+               <div class="col-md-6 text-light">
+                  <h1 class="text-light bangla"><b>ডিপ মাইন্ড স্কুল</b></h1>
+                  <p class="footer_text">Educational platform for learning programming and graphics.</p>
+               </div>
+               <div class="col-md-6 text-right">
+                  <h2 class="footer_taital text-light bangla">যোগাযোগ</h2>
+                  <ul class="footer_links">
+                     <li><a class="text-light" href="#">+1234567890</a></li>
+                     <li><a class="text-light" href="#">info@yourdomain.com</a></li>
+                     <li><a class="text-light" href="#">123 Street, City, Country</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/custom.js' %}"></script>
+   </body>
+</html>
