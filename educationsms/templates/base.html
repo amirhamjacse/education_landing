@@ -83,14 +83,62 @@
             margin-left: 10px;
             vertical-align: middle;
         }
+
+
+        #programs .card {
+            border-radius: 15px; /* Smooth corners for a modern look */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effect */
+         }
+         
+         #programs .card:hover {
+            transform: translateY(-5px); /* Slight lift on hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* More prominent shadow on hover */
+         }
+         
+         #programs .card-body {
+            padding: 30px; /* Extra padding for a more spacious feel */
+         }
+         
+         #programs .card-title {
+            font-size: 1.25rem; /* Larger, professional font for titles */
+            font-weight: 600; /* Bold titles for emphasis */
+            color: #333; /* Darker color for readability */
+         }
+         
+         #programs .card-text {
+            font-size: 1rem; /* Slightly smaller text for descriptions */
+            color: #666; /* Lighter color for text to make it less bold */
+         }
+         
+         #programs .btn {
+            padding: 10px 20px; /* Larger, more professional button */
+            font-size: 1rem; /* Standard font size for the button */
+            border-radius: 5px; /* Smooth button corners */
+         }
+         
+         #programs .col-md-6, .col-lg-4 {
+            display: flex;
+            justify-content: center; /* Center cards in their columns */
+            align-items: stretch; /* Ensure all cards are aligned */
+         }
+         
+         #programs i {
+            color: #007bff; /* Consistent blue color for icons */
+         }
+         
       </style>
    </head>
    <body>
       <div class="header_section">
          <div class="header_bg">
             <div class="container">
-               <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
-                  <h1 class="bangla"><b>ডিপ মাইন্ড স্কুল</b></h1>
+               <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5 pb-0">
+                  {% comment %} <h1 class="bangla"><b>ডিপ মাইন্ড স্কুল</b></h1> {% endcomment %}
+                  <h1 class="bangla">
+                    <img src="{% static 'images/mainlogo.png' %}" alt="DeepMind School Logo" style="height: 60px;">
+                    {% comment %} <b>ডিপ মাইন্ড স্কুল</b> {% endcomment %}
+                 </h1>
+                 
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                      <span class="navbar-toggler-icon"></span>
                   </button>
@@ -110,15 +158,16 @@
          <div class="container text-light">
             <div class="row">
                <div class="col-md-6 text-light">
-                  <h1 class="text-light bangla"><b>ডিপ মাইন্ড স্কুল</b></h1>
-                  <p class="footer_text">Educational platform for learning programming and graphics.</p>
+                  {% comment %} <h1 class="text-light bangla"><b>ডিপ মাইন্ড স্কুল</b></h1> {% endcomment %}
+                  <img src="{% static 'images/mainlogo.png' %}" alt="DeepMind School Logo" style="height: 60px;">
+                  <p class="footer_text bangla">প্রোগ্রামিং এবং গ্রাফিক্স শেখার জন্য প্ল্যাটফর্ম।</p>
                </div>
                <div class="col-md-6 text-right">
                   <h2 class="footer_taital text-light bangla">যোগাযোগ</h2>
                   <ul class="footer_links">
-                     <li><a class="text-light" href="#">+1234567890</a></li>
-                     <li><a class="text-light" href="#">info@yourdomain.com</a></li>
-                     <li><a class="text-light" href="#">123 Street, City, Country</a></li>
+                     <li><a class="text-light" href="#">+8801971247247</a></li>
+                     <li><a class="text-light" href="#">info@deepmindacademy.com</a></li>
+                     <li><a class="text-light" href="#">Dhaka, Bangladesh</a></li>
                   </ul>
                </div>
             </div>

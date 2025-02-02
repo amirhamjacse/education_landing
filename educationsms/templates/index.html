@@ -11,16 +11,13 @@
                <div class="banner_taital_main">
                   <div class="row">
                      <div class="col-md-6">
-                        <h1 class="text-light bangla1">ক্লাস নাইন থেকেই আইসিটি সাবজেক্টে ভালো করতে যুক্ত হও সেরা সফটওয়্যার ইঞ্জিনিয়ার ও কম্পিউটার গ্রাফিকস ডিজাইনারদের সাথে 
-                         শুধুমাত্র একাডেমিক রেজাল্ট নয়
-                         প্রোগ্রামিং ও গ্রাফিকসে তোমার শক্ত ভিত গড়ে উঠবে এদের হাত ধরেই। 
-                         এক অভূতপূর্ব জার্নি অপেক্ষা করছে তোমার জন্য, ক্লিক করো এখনই...</h1> 
+                        <h1 class="text-light bangla1 banner_taital"> যুক্ত হও দেশ সেরা সফটওয়্যার ইঞ্জিনিয়ার ও গ্রাফিক্স ডিজাইনাদের সাথে </h1> 
                           
                          <ul class="mt-3 text-light bangla" style="font-size: 16px">
-                            <li><i class="bi bi-arrow-right"></i> অনলাইন ক্লাস</li>
-                            <li><i class="bi bi-arrow-right"></i> যাদের ল্যাপটপ/ কম্পিউটার নেই তারাও জানাও।</li>
-                            <li><i class="bi bi-arrow-right"></i> তোমার যদি মন প্রোগ্রামিংয়ে ক্যারিয়ার গড়তে উন্মুখ থাকে তবে এটা কোন বাধাই নয়।</li>
-                            <li><i class="bi bi-arrow-right"></i> যাদের আর্থিক সংগতি নেই কিন্তু ডিপ বিউটিফুল মাইন্ড আছে তারাও জানাও।</li>
+                            {% comment %} <li><i class="bi bi-arrow-right"></i> অনলাইন ক্লাস</li> {% endcomment %}
+                            {% comment %} <li><i class="bi bi-arrow-right"></i> যাদের ল্যাপটপ/ কম্পিউটার নেই তারাও জানাও।</li> {% endcomment %}
+                            <li><i class="bi bi-arrow-right"></i> ক্লাস ৯ থেকেই গড়ে তুলো আইসিটি-তে শক্ত ভিত </li>
+                            {% comment %} <li><i class="bi bi-arrow-right"></i> যাদের আর্থিক সংগতি নেই কিন্তু ডিপ বিউটিফুল মাইন্ড আছে তারাও জানাও।</li> {% endcomment %}
                         </ul>
                         <div class="btn_main">
                            <div class="about_bt bangla2"><a href="{% url "registration_page" %} ">রেজিস্ট্রেশন</a></div>
@@ -65,9 +62,91 @@
 </div>
 <!--banner section end -->
 </div>
+
+
+<h1 class="services_taital bangla2 pt-4" style="padding-bottom: 40px;">
+   <span style="color:rgb(1, 0, 9)">এ এক দুর্দান্ত জার্নি 
+</h1>
+<div class="container">
+   <h5 class="text-center bangla">এমন সুযোগ আসলে কোথাও নেই। শুধু একাডেমিক রেজাল্ট ভালো নয়, চাইলে ক্যারিয়ার হিসেবে নিতে পাইথন বা গ্রাফিক্স ডিজাইনের জন্য আছে উন্মুক্ত পথ এবং হাতে কলমে শেখার অভূতপূর্ব সুযোগ </h5>
+</div>
+
+<section id="programs" class="container d-flex justify-content-center py-5 bangla">
+   <div class="row text-center">
+      <!-- Undergraduate Programs -->
+      <div class="col-lg-4 col-md-6 mb-4 ">
+         <div class="card shadow-sm border-0 ">
+            <div class="card-body">
+               <i class="bi bi-briefcase-fill" style="font-size: 3rem; color: #007bff;"></i>
+               {% comment %} <h5 class="card-title mt-3">Undergraduate programs</h5> {% endcomment %}
+               <p class="card-text">সহজে আইসিটি-তে ভালো করতে চাও?
+                  আমাদের জার্নি শুরু হবে ক্লাস ৯ থেকে। খুব সাজানো এবং সহজ স্ট্যাডি প্লান পাবে কোর্স শুরুর প্রথম থেকেই। প্রতিটি টপিকের সহজ ব্যাখ্যা। থাকবে নোটস- যা উচ্চতর নম্বর পেতে সহায়তা করবে।   
+                   </p>
+               {% comment %} <a href="#" class="btn btn-primary btn-lg">Explore undergraduate degree programs</a> {% endcomment %}
+            </div>
+         </div>
+      </div>
+      
+      <!-- Graduate Programs -->
+      <div class="col-lg-4 col-md-6 mb-4">
+         <div class="card shadow-sm border-0">
+            <div class="card-body">
+               <i class="bi bi-person-check-fill" style="font-size: 3rem; color: #007bff;"></i>
+               {% comment %} <h5 class="card-title mt-3">Graduate programs</h5> {% endcomment %}
+               <p class="card-text">পারসোনালাইজড শিক্ষা কাঠামো
+                  আমরা জানি, সবাইকে এক পাল্লায় মাপলে শিক্ষার ক্ষেত্রে আসলে পিছিয়ে পড়ে সবাই। এজন্য তোমার বিষয় অনুধাবন ক্ষমতা, প্রয়োগ যোগ্যতা এবং সর্বোপরি তোমার আগ্রহ-এর উপর ভিত্তি করে আমরা ব্যাকএন্ড থেকে সাজাবো শুধু তোমার জন্য শিখন স্ট্র্যাটেজি।   </p>
+               {% comment %} <a href="#" class="btn btn-primary btn-lg">Explore graduate degree programs</a> {% endcomment %}
+            </div>
+         </div>
+      </div>
+      
+      <!-- Professional and Continuing Education -->
+      <div class="col-lg-4 col-md-6 mb-4">
+         <div class="card shadow-sm border-0">
+            <div class="card-body">
+               <i class="bi bi-laptop-fill" style="font-size: 3rem; color: #007bff;"></i>
+               {% comment %} <h5 class="card-title mt-3">Professional and Continuing Education</h5> {% endcomment %}
+               <p class="card-text">আমার স্বপ্ন আমি প্রোগ্রামার/ এনিমেটর হব 
+                  আমাদের প্রাথমিক লক্ষ্য হল, তোমার একাডেমিক রেজাল্ট। তোমার শিখন গতি এবং আগ্রহ মূল্যায়ন বিবেচনায় আমরাই তোমাকে স্বাগত জানাবো আমাদের ডিপ মাইন্ড কোর গ্রুপে, যারা স্কুল থেকেই পাইথন প্রোগ্রামিং বা গ্রাফিক্স/ এনিমেশনে স্কিল ডেভেলপ করতে চায়। এসব বিষয়ে ক্যারিয়ার গড়তে তুমি পাবে সিজনড মেন্টরস   </p>
+               {% comment %} <a href="#" class="btn btn-primary btn-lg">Explore professional and cont-ed programs</a> {% endcomment %}
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-2 col-md-6 mb-4">
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+         <div class="card shadow-sm border-0">
+            <div class="card-body">
+               <i class="bi bi-laptop-fill" style="font-size: 3rem; color: #007bff;"></i>
+               {% comment %} <h5 class="card-title mt-3">Professional and Continuing Education</h5> {% endcomment %}
+               <p class="card-text">আমার ল্যাপটপ/ কম্পিউটার নেই
+                  ডিজিটাল ডিভাইড আমাদের আশাহত করে। প্লিজ, আমাদের জানাও। একসাথে, উই উইল ফাইন্ড অউট সামথিং!  </p>
+               {% comment %} <a href="#" class="btn btn-primary btn-lg">Explore professional and cont-ed programs</a> {% endcomment %}
+            </div>
+         </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-center ">
+         <div class="card shadow-sm border-0 d-flex justify-content-center">
+            <div class="card-body">
+               <i class="bi bi-laptop-fill" style="font-size: 3rem; color: #007bff;"></i>
+               {% comment %} <h5 class="card-title mt-3">Professional and Continuing Education</h5> {% endcomment %}
+               <p class="card-text">আমার আর্থিক সংগতি তেমন নেই 
+                  আমরা মনে করি না অর্থ কোন কাজকে আটকে রাখতে পারে। তোমার যদি শেখার অদম্য ইচ্ছা থাকে, আমাদের জানাও।  </p>
+               {% comment %} <a href="#" class="btn btn-primary btn-lg">Explore professional and cont-ed programs</a> {% endcomment %}
+            </div>
+         </div>
+      </div>
+
+   </div>
+</section>
+
+
+
+
 {% if teachers %}
-<h1 class="services_taital bangla2" style="padding-top: 50px; padding-bottom: 40px;">
-   <span style="color:rgb(1, 0, 9)">আমাদের </span> শিক্ষকগণ
+<h1 class="services_taital bangla2" style=" padding-bottom: 40px;">
+   <span style="color:rgb(1, 0, 9)">আমাদের শিক্ষকগণ
 </h1>
 <section id="author-group" class="container">
    <div class="row text-center">
