@@ -144,9 +144,11 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                      <ul class="navbar-nav mr-auto">
+                        {% if request.path != '/' %}
                         <li class="nav-item active">
-                           {% comment %} <a class="nav-link" href="{% url 'index' %}">Home</a> {% endcomment %}
+                           <a class="nav-link text-dark bangla1" href="{% url 'landing_page' %}">প্রথম পাতা</a>
                         </li>
+                        {% endif %}
                      </ul>
                   </div>
                </nav>
@@ -162,14 +164,14 @@
                   <img src="{% static 'images/mainlogo.png' %}" alt="DeepMind School Logo" style="height: 60px;">
                   <p class="footer_text bangla">প্রোগ্রামিং এবং গ্রাফিক্স শেখার জন্য প্ল্যাটফর্ম।</p>
                </div>
-               <div class="col-md-6 text-right">
-                  <h2 class="footer_taital text-light bangla">যোগাযোগ</h2>
-                  <ul class="footer_links">
-                     <li><a class="text-light" href="#">+8801971247247</a></li>
-                     <li><a class="text-light" href="#">info@deepmindacademy.com</a></li>
-                     <li><a class="text-light" href="#">Dhaka, Bangladesh</a></li>
-                  </ul>
-               </div>
+               <div class="col-md-6">
+                <h2 class="footer_taital text-light bangla text-center text-md-right">যোগাযোগ</h2>
+                <ul class="footer_links list-unstyled text-center text-md-right">
+                   <li><a class="text-light" href="#">+8801971247247</a></li>
+                   <li><a class="text-light" href="#">info@deepmindacademy.com</a></li>
+                   <li><a class="text-light" href="#">Dhaka, Bangladesh</a></li>
+                </ul>
+             </div>
             </div>
          </div>
       </div>

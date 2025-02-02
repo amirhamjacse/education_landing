@@ -5,7 +5,7 @@
         <div class="services_section layout_padding" style="padding-bottom: 50px;">
            <div class="container">
             {% comment %} {{form.as_p}} {% endcomment %}
-              <h1 class="services_taital bangla"><span style="color:rgb(1, 1, 0)">রেজিস্ট্রেশন </h1>
+              <h1 class="services_taital bangla2"><span style="color:rgb(1, 1, 0)">রেজিস্ট্রেশন </h1>
                 
                 <div class="services_section_2">
                   {% if form.errors %}
@@ -128,8 +128,9 @@
               
                           <!-- Submit Button -->
                           <div class="col-12 text-end">
-                              <button type="submit" class="btn btn-primary">সাবমিট</button>
-                          </div>
+                            <button type="submit" class="btn btn-primary" style="padding: 12px 24px; font-size: 1.25rem;">সাবমিট</button>
+                        </div>
+                        
                       </div>
                   </form>
               </div>
@@ -139,24 +140,29 @@
         </div>
 
 
-        <h1 class="services_taital"><span style="color:rgb(4, 3, 0)">Our Policies </h1>
-            {% comment %} <section class="container py-5"> {% endcomment %}
-                <div class="row">
-                    <div class="col-md-8 mx-auto text-center">
-                        {% comment %} <h2 class="mb-4">Our Policies</h2> {% endcomment %}
-                        <p class="text-muted">We are committed to maintaining transparency and upholding the highest standards of service.</p>
-                    </div>
+        <h1 class="services_taital bangla2"><span style="color:rgb(4, 3, 0)">আমাদের নীতি</span></h1>
+
+
+        <section class="container py-5 bangla">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <p class="text-muted">আমরা স্বচ্ছতা রক্ষা এবং সেবার সর্বোচ্চ মান বজায় রাখার প্রতিশ্রুতি প্রদান করি।</p>
                 </div>
-                <div class="row mt-4 ">
-                    <div class="col-md-6 mx-auto pb-4">
-                        <ul class="list-group">
-                            <li class="list-group-item">{% block policy_rule_1 %}Your data is securely stored and never shared.{% endblock %}</li>
-                            <li class="list-group-item">{% block policy_rule_2 %}Refunds are processed within 7 business days.{% endblock %}</li>
-                            <li class="list-group-item">{% block policy_rule_3 %}Terms and conditions apply to all services.{% endblock %}</li>
-                            <li class="list-group-item">{% block policy_rule_4 %}Customer support is available 24/7.{% endblock %}</li>
-                        </ul>
-                    </div>
-                    </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6 mx-auto pb-4">
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">{% block policy_rule_1 %}আপনার ডেটা নিরাপদভাবে সংরক্ষিত থাকে এবং কখনই শেয়ার করা হয় না।{% endblock %}</li>
+                        <li class="list-group-item">{% block policy_rule_2 %}ফিরতি প্রক্রিয়া ৭ কার্যদিবসের মধ্যে সম্পন্ন হয়।{% endblock %}</li>
+                        <li class="list-group-item">{% block policy_rule_3 %}সকল সেবার জন্য শর্তাবলী প্রযোজ্য।{% endblock %}</li>
+                        <li class="list-group-item">{% block policy_rule_4 %}গ্রাহক সেবা ২৪/৭ উপলব্ধ।{% endblock %}</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        
+        
+        
                 {% comment %} </div> {% endcomment %}
            
         <!-- services section end -->
