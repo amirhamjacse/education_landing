@@ -67,7 +67,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -93,27 +93,27 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'CONFIG.wsgi.application'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # Use PostgreSQL engine
-        'NAME': 'deepacademyregdb',  # Database name
-        'USER': 'deepacademy',  # Database user
-        'PASSWORD': 'deep123#',  # Password for the user
-        'HOST': 'localhost',  # Assuming the database is on the same machine
-        'PORT': '5432',  # Default PostgreSQL port
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',  # Use PostgreSQL engine
+#         'NAME': 'deepacademyregdb',  # Database name
+#         'USER': 'deepacademy',  # Database user
+#         'PASSWORD': 'deep123#',  # Password for the user
+#         'HOST': 'localhost',  # Assuming the database is on the same machine
+#         'PORT': '5432',  # Default PostgreSQL port
+#     }
+# }
 
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # DATABASES = {
 #     'default': {
