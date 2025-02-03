@@ -30,7 +30,7 @@
                           <div class="col-md-6">
                               <div class="mb-3">
                                   <label for="first_name" class="form-label text-dark">নামের প্রথম অংশ </label>
-                                  {{ form.first_name|add_class:"form-control" }}
+                                  {{ form.first_name|add_class:"form-control"|attr:'required' }}
                               </div>
                           </div>
               
@@ -62,7 +62,7 @@
                           <div class="col-md-6">
                               <div class="mb-3">
                                   <label for="phone_number" class="form-label text-dark">মোবাইল নাম্বার </label>
-                                  {{ form.phone_number|add_class:"form-control" }}
+                                  {{ form.phone_number|add_class:"form-control"|attr:'required' }}
                               </div>
                           </div>
               
@@ -70,7 +70,7 @@
                           <div class="col-md-6">
                               <div class="mb-3">
                                   <label for="email_address" class="form-label text-dark">ইমেইল</label>
-                                  {{ form.email_address|add_class:"form-control" }}
+                                  {{ form.email_address|add_class:"form-control"|attr:'required' }}
                               </div>
                           </div>
               
@@ -78,7 +78,7 @@
                           <div class="col-md-6">
                               <div class="mb-3">
                                   <label for="school" class="form-label text-dark">স্কুলের নাম/প্রতিষ্ঠানের নাম</label>
-                                  {{ form.school|add_class:"form-control" }}
+                                  {{ form.school|add_class:"form-control"|attr:'required' }}
                               </div>
                           </div>
               
@@ -86,7 +86,7 @@
                           <div class="col-md-6">
                               <div class="mb-3">
                                   <label for="district" class="form-label text-dark">জেলা</label>
-                                  {{ form.district|add_class:"form-control" }}
+                                  {{ form.district|add_class:"form-control"|attr:'required' }}
                               </div>
                           </div>
               
@@ -94,7 +94,7 @@
                           <div class="col-md-6">
                               <div class="mb-3">
                                   <label for="upazila" class="form-label text-dark">উপজেলা/থানা</label>
-                                  {{ form.upazila|add_class:"form-control" }}
+                                  {{ form.upazila|add_class:"form-control"|attr:'required' }}
                               </div>
                           </div>
               
