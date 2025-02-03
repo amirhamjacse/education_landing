@@ -42,6 +42,12 @@
             height:450px;
             text-align: center;
           }
+          @media (max-width: 768px) {
+            #author-group .author-card {
+                width: 100%;
+                margin-right: 0; /* Remove extra spacing on small screens */
+            }
+        }
           
           #author-group .author-image {
             width: 150px;
@@ -134,7 +140,7 @@
             display: flex;
             align-items: start;
             {% comment %} background: #fff; {% endcomment %}
-            padding: 20px;
+            padding: 0 20px;
             border-radius: 10px;
             {% comment %} box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); {% endcomment %}
             {% comment %} transition: transform 0.3s ease-in-out; {% endcomment %}
@@ -153,16 +159,19 @@
         }
         .program-content h3 {
             font-weight: bold;
+            padding: 0px;
             color: #333;
         }
         .program-content p {
             color: #666;
-            font-size: 14px;
+            padding: 0px;
+            font-size: 16px;
         }
         table td {
             color: black;
         }
          
+        
       </style>
    </head>
    <body>
