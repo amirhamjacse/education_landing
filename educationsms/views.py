@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, View
+from django.views.generic import TemplateView, View, DetailView
 from django.shortcuts import render
-from .models import StudentsInformation, TeacherInfo
+from .models import StudentsInformation, TeacherInfo, DetailsOfTeacher
 from .forms import StudentInfoForm
 from django.contrib import messages
 
@@ -40,6 +40,18 @@ class RegistrationView(View):
         context = {'form': form}
         return render(request, self.template, context)
 
+
+
+class TeacherDetailView(DetailView):
+    model = TeacherInfo
+    template_name = 'teacher_detail.html'  # Specify the template for displaying the details
+
+    def get(self, request, *args, **kwargs):
+        teacher_details = DetailsOfTeacher.objects.filter(teacher_id=self.kwargs['pk']).last()
+        context = {
+            'teacher_details': teacher_details,
+        }
+        return render(request, self.template_name, context)
 
 
 import openpyxl

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container pt-4 mt-5">
+    <!-- Card for Teacher Details -->
+    <div class="card pt-4 my-4">
+        <div class="card-body">
+            <!-- Teacher Image (Circular) -->
+            <div class="text-center">
+                <img src="{{ teacher_details.teacher.picture.url }}" alt="{{ teacher_details.teacher.name }}" class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+            </div>
+
+            <!-- Teacher's Name -->
+            <h3 class="text-center bangla1 mt-3">{{ teacher_details.teacher.name|default_if_none:"-" }}</h3>
+
+            <!-- Works Section -->
+            <div class="mt-4">
+                {% comment %} <h5>Works</h5> {% endcomment %}
+                <p class="text-start text-justify text-dark bangla">{{ teacher_details.works|default_if_none:"-" }}</p>
+            </div>
+
+            <!-- Qualifications Section -->
+            <div class="mt-4">
+                {% comment %} <h5>Qualifications</h5> {% endcomment %}
+                <p class="text-start text-justify text-dark bangla">{{ teacher_details.qualifications|default_if_none:"-" }}</p>
+            </div>
+
+            <!-- Other Information Section -->
+            <div class="mt-4">
+                {% comment %} <h5>Other Information</h5> {% endcomment %}
+                <p class="text-start text-justify text-dark bangla">{{ teacher_details.others|default_if_none:"-" }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

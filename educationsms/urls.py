@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.LandingPageView.as_view(), name='landing_page'),
     path('registration/', views.RegistrationView.as_view(), name='registration_page'),
     path('export/students/', views.export_students, name='export_students'),
+    path('teacher/<int:pk>/', views.TeacherDetailView.as_view(), name='teacher_detail'),  
 ]

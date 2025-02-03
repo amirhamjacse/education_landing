@@ -2,7 +2,7 @@ import openpyxl
 from django.http import HttpResponse
 from django.contrib import admin
 from .models import StudentsInformation
-from .models import TeacherInfo
+from .models import TeacherInfo, DetailsOfTeacher
 # Register your models here.
 from import_export.admin import ExportMixin, ExportActionMixin
 
@@ -136,3 +136,13 @@ class StudentsInformationAdmin(admin.ModelAdmin):
     
     # Define the export action
     actions = [export_students]
+
+@admin.register(DetailsOfTeacher)
+class DetailsOfTeacherAdmin(admin.ModelAdmin):
+    list_display = (
+        'teacher',
+        'works',
+        'qualifications',
+        'others',
+            )
+

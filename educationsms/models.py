@@ -65,3 +65,19 @@ class TeacherInfo(models.Model):
     #     blank=True,
     #     null=True
     # )
+    def __str__(self):
+        return f"{self.name}"  # Display teacher name as a reference
+
+
+class DetailsOfTeacher(models.Model):
+    teacher = models.ForeignKey(TeacherInfo, on_delete=models.CASCADE, related_name="teacher_details")
+    works = models.TextField(blank=True, null=True)
+    qualifications = models.TextField(blank=True, null=True)
+    others = models.TextField(blank=True, null=True)
+    address = models.CharField(max_length=255, blank=True, null=True)
+    email = models.EmailField(max_length=255, blank=True, null=True)
+    date_of_birth = models.DateField(blank=True, null=True)
+    hire_date = models.DateField(blank=True, null=True)
+
+    def __str__(self):
+        return f"Details of {self.teacher.name}"  # Display teacher name as a reference
