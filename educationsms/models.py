@@ -8,6 +8,8 @@ from django.core.validators import RegexValidator
 
 class StudentsInformation(models.Model):
     # Fields
+    iam_student = models.BooleanField(default=False)
+    iam_gurdian = models.BooleanField(default=False)
     first_name = models.CharField(max_length=255, blank=True, null=True)
     last_name = models.CharField(max_length=255, blank=True, null=True)
     fathers_name = models.CharField(max_length=255, blank=True, null=True)
@@ -23,6 +25,12 @@ class StudentsInformation(models.Model):
         message="Phone number must be in the format '01XXXXXXXXX' and be exactly 11 digits long."
     )
     phone_number = models.CharField(
+        validators=[phone_regex],
+        max_length=11,  # Length of '+8801XXXXXXXXX'
+        blank=True,
+        null=True
+    )
+    gurdian_phone_number = models.CharField(
         validators=[phone_regex],
         max_length=11,  # Length of '+8801XXXXXXXXX'
         blank=True,

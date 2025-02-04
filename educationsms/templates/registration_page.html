@@ -27,10 +27,28 @@
                   <form method="post" action="">
                       {% csrf_token %}
                       <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3 form-check">
+                                <!-- Checkbox Field -->
+                                {{ form.iam_gurdian|add_class:"form-check-input custom-checkbox" }}
+                                <label for="iam_gurdian" class="form-check-label text-dark">
+                                    আমি অবিভাবক
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3 form-check">
+                                <!-- Checkbox Field -->
+                                {{ form.iam_student|add_class:"form-check-input custom-checkbox" }}
+                                <label for="iam_student" class="form-check-label text-dark">
+                                    আমি ছাত্র/ছাত্রী 
+                                </label>
+                            </div>
+                        </div>
                           <!-- First Name -->
                           <div class="col-md-6">
                               <div class="mb-3">
-                                  <label for="first_name" class="form-label text-dark">ছাত্র/ছাত্রীর নামের প্রথম অংশ </label>
+                                  <label for="first_name" class="form-label text-dark">ছাত্র/ছাত্রীর নামের প্রথম অংশ </label> <span class="text-danger">*</span>
                                   {{ form.first_name|add_class:"form-control"|attr:'required' }}
                               </div>
                           </div>
@@ -38,7 +56,7 @@
                           <!-- Last Name -->
                           <div class="col-md-6">
                               <div class="mb-3">
-                                  <label for="last_name" class="form-label text-dark">ছাত্র/ছাত্রীর নামের শেষ অংশ</label>
+                                  <label for="last_name" class="form-label text-dark">ছাত্র/ছাত্রীর নামের শেষ অংশ</label> <span class="text-danger">*</span>
                                   {{ form.last_name|add_class:"form-control" }}
                               </div>
                           </div>
@@ -69,7 +87,10 @@
                           <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="phone_number" class="form-label text-dark">অবিভাবক এর মোবাইল নাম্বার </label> <span class="text-danger">*</span>
-                                {% comment %} {{ form.phone_number|add_class:"form-control"|attr:'required' }} {% endcomment %}
+                                {{ form.gurdian_phone_number|add_class:"form-control"|attr:'required' }}
+                                
+
+
                             </div>
                         </div>
             
@@ -85,7 +106,7 @@
                           <!-- School -->
                           <div class="col-md-6">
                               <div class="mb-3">
-                                  <label for="school" class="form-label text-dark">শিক্ষা প্রতিষ্ঠান</label>
+                                  <label for="school" class="form-label text-dark">শিক্ষা প্রতিষ্ঠান</label> <span class="text-danger">*</span>
                                   {{ form.school|add_class:"form-control"|attr:'required' }}
                               </div>
                           </div>
@@ -95,13 +116,13 @@
                           <!-- Thana -->
                           <div class="col-md-6">
                               <div class="mb-3">
-                                  <label for="upazila" class="form-label text-dark">উপজেলা/থানা</label>
+                                  <label for="upazila" class="form-label text-dark">উপজেলা/থানা</label> <span class="text-danger">*</span>
                                   {{ form.upazila|add_class:"form-control"|attr:'required' }}
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="district" class="form-label text-dark">জেলা</label>
+                                    <label for="district" class="form-label text-dark">জেলা</label> <span class="text-danger">*</span>
                                     {{ form.district|add_class:"form-control"|attr:'required' }}
                                 </div>
                             </div>
@@ -114,6 +135,8 @@
                               </div>
                           </div>
                {% endcomment %}
+
+
                           <!-- Has Computer/Laptop -->
                           <div class="col-md-6">
                            <div class="mb-3 form-check">
