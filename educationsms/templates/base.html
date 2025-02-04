@@ -142,11 +142,8 @@
         .program-box {
             display: flex;
             align-items: start;
-            {% comment %} background: #fff; {% endcomment %}
             padding: 0 20px;
             border-radius: 10px;
-            {% comment %} box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); {% endcomment %}
-            {% comment %} transition: transform 0.3s ease-in-out; {% endcomment %}
         }
         .program-box:hover {
             transform: translateY(-5px);
@@ -180,26 +177,8 @@
          color:rgb(255, 255, 255);
          background-color: #dc3545;
          text-align: center;
-         {% comment %} padding: 10px 0px; {% endcomment %}
          border-radius: 40px;
      }
-     
-     {% comment %} .image_1 {
-      position: relative;
-      width: 100%;
-  }
-  .image_1 img {
-      width: 100%;
-      height: auto;
-  }
-  .banner-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(0, 0, 0, 0);
-      color: white;
-      {% comment %} padding: 20px; {% endcomment %}
  
       </style>
    </head>
@@ -208,24 +187,10 @@
          <div class="header_bg">
             <div class="container">
                <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5 pb-0">
-                  {% comment %} <h1 class="bangla"><b>ডিপ মাইন্ড স্কুল</b></h1> {% endcomment %}
                   <h1 class="bangla">
                     <img src="{% static 'images/mainlogo.png' %}" alt="DeepMind School Logo" style="height: 60px;">
-                    {% comment %} <b>ডিপ মাইন্ড স্কুল</b> {% endcomment %}
                  </h1>
-                 
-                  {% comment %} <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-                     <span class="navbar-toggler-icon"></span>
-                  </button> {% endcomment %}
-                  {% comment %} <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                     <ul class="navbar-nav mr-auto">
-                        {% if request.path != '/' %}
-                        <li class="nav-item active">
-                           <a class="nav-link text-dark bangla1" href="{% url 'landing_page' %}">প্রথম পাতা</a>
-                        </li>
-                        {% endif %}
-                     </ul>
-                  </div> {% endcomment %}
+               
                </nav>
             </div>
          </div>
@@ -235,7 +200,6 @@
          <div class="container text-light">
             <div class="row">
                <div class="col-md-6 text-light">
-                  {% comment %} <h1 class="text-light bangla"><b>ডিপ মাইন্ড স্কুল</b></h1> {% endcomment %}
                   <img src="{% static 'images/mainlogo.png' %}" alt="DeepMind School Logo" style="height: 60px;">
                   <p class="footer_text bangla">স্কুল ও কলেজ ছাত্রদের জন্য প্রোগ্রামিং (পাইথন) ও গ্রাফিক্স শেখার প্লাটফর্ম।</p>
                </div>

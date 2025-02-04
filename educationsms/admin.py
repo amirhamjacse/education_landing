@@ -7,26 +7,6 @@ from .models import TeacherInfo, DetailsOfTeacher
 from import_export.admin import ExportMixin, ExportActionMixin
 
 
-# @admin.register(StudentsInformation)
-# class StudentsInformationAdmin(ExportActionMixin, admin.ModelAdmin):
-#     list_display = (
-#             'first_name',
-#             'last_name',
-#             'fathers_name',
-#             'mothers_name',
-#             'phone_number',
-#             'school',
-#             'district',
-#             'thana',
-#             'upazila',
-#             'email_address',
-#             'has_computer_laptop',
-#             )
-
-#     search_fields = ('first_name',)
-#     export_fields = ('first_name', 'last_name', 'fathers_name', 'mothers_name', 'phone_number')
-
-
 @admin.register(TeacherInfo)
 class TeacherInformationAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
@@ -35,40 +15,6 @@ class TeacherInformationAdmin(ExportMixin, admin.ModelAdmin):
                 'sort',
                 'other_info',
             )
-
-
-
-# from import_export import resources
-# from django.contrib import admin
-# from .models import StudentsInformation
-# from import_export.admin import ExportActionMixin
-
-# class StudentsInformationResource(resources.ModelResource):
-#     class Meta:
-#         model = StudentsInformation
-#         fields = ('first_name', 'last_name', 'fathers_name', 'mothers_name', 'phone_number')
-#         export_order = ('first_name', 'last_name', 'fathers_name', 'mothers_name', 'phone_number')
-
-# class StudentsInformationAdmin(ExportActionMixin, admin.ModelAdmin):
-#     list_display = (
-#         'first_name',
-#         'last_name',
-#         'fathers_name',
-#         'mothers_name',
-#         'phone_number',
-#         'school',
-#         'district',
-#         'thana',
-#         'upazila',
-#         'email_address',
-#         'has_computer_laptop',
-#     )
-#     search_fields = ('first_name',)
-#     resource_class = StudentsInformationResource  # Using the custom resource
-
-# admin.site.register(StudentsInformation, StudentsInformationAdmin)
-
-
 
 
 # Function to export students to an Excel file
@@ -80,10 +26,11 @@ def export_students(modeladmin, request, queryset):
 
     # Define the headers
     headers = [
+        'iam_student',
+        'iam_gurdian',
         'First Name', 
         'Last Name', 
-        # 'Father\'s Name', 
-        # 'Mother\'s Name', 
+        'gurdian_phone_number',
         'Phone Number', 
         'School', 
         'District', 
@@ -98,10 +45,12 @@ def export_students(modeladmin, request, queryset):
     # Write student data to the worksheet
     for student in queryset:
         row = [
+            'Yes' if student.iam_gurdian else 'No',
+            'Yes' if student.iam_student else 'No',
             student.first_name,
             student.last_name,
             # student.fathers_name,
-            # student.mothers_name,
+            student.gurdian_phone_number,
             student.phone_number,
             student.school,
             student.district,
@@ -128,7 +77,9 @@ def export_students(modeladmin, request, queryset):
 @admin.register(StudentsInformation)
 class StudentsInformationAdmin(admin.ModelAdmin):
     list_display = (
-        'first_name', 'last_name', 
+        'iam_gurdian',
+        'iam_student',
+        'gurdian_phone_number','first_name', 'last_name', 
         'phone_number', 'school', 'district', 'upazila', 
         'email_address', 'has_computer_laptop', 'can_manage_laptop',
     )
@@ -136,6 +87,7 @@ class StudentsInformationAdmin(admin.ModelAdmin):
     
     # Define the export action
     actions = [export_students]
+
 
 @admin.register(DetailsOfTeacher)
 class DetailsOfTeacherAdmin(admin.ModelAdmin):

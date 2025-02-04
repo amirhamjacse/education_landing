@@ -3,22 +3,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
-
-
-
-{% comment %} <div class="container-fluid">
-    <div class="image_1">
-        <img src="{% static 'images/banner.jpeg' %}" alt="Banner Image">
-        <div class="banner-content">
-            <h2>Welcome to Our Django Project</h2>
-            <p>Build powerful applications with Django and Bootstrap.</p>
-            <a href="#" class="btn btn-primary">Get Started</a>
-        </div>
-    </div>
-</div> {% endcomment %}
-
-
 <div class="banner_section layout_padding header_section">
 
       <div class="carousel-inner">
@@ -44,116 +28,23 @@
             </div>
         </div>
     </div>
-         {% comment %} <div class="carousel-item">
-            <div class="container">
-               <div class="banner_taital_main">
-                  <div class="row">
-                     <div class="col-md-6">
-                        <h1 class="banner_taital">Casinal Educations Coachings</h1>
-                        <p class="banner_text">Eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                        <div class="btn_main">
-                            <div class="about_bt "><a href="{% url "registration_page" %} ">Registration</a></div>
-                        </div>
-                     </div>
-                     <div class="col-md-6">
-                        <div class="image_1"><img src="{% static 'images/img-1.png' %}"></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div> {% endcomment %}
+      
        
 
       </div>
-      {% comment %} <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
-      <i class="fa fa-arrow-left" style="font-size:24px"></i>
-      </a>
-      <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
-      <i class="fa fa-arrow-right" style="font-size:24px"></i>
-      </a> {% endcomment %}
-   {% comment %} </div> {% endcomment %}
+
 </div>
 <!--banner section end -->
 </div>
 
-{% comment %} 
-<h1 class="services_taital bangla2 pt-4" style="padding-bottom: 40px;">
-   <span style="color:rgb(1, 0, 9)">এ এক দুর্দান্ত জার্নি 
-</h1>
-<div class="container">
-   <p class="text-center bangla pt-0 mt-0">এমন সুযোগ আসলে কোথাও নেই। শুধু একাডেমিক রেজাল্ট ভালো নয়, চাইলে ক্যারিয়ার হিসেবে নিতে পাইথন বা গ্রাফিক্স ডিজাইনের জন্য আছে উন্মুক্ত পথ এবং হাতে কলমে শেখার অভূতপূর্ব সুযোগ </p>
-</div>
 
-<section id="programs" class="container d-flex justify-content-center py-5 bangla">
-   <div class="row text-center">
-      <!-- Undergraduate Programs -->
-      <div class="col-lg-4 col-md-6 mb-4 ">
-         <div class="card shadow-sm border-0 ">
-            <div class="card-body">
-               <i class="bi bi-briefcase-fill" style="font-size: 3rem; color: #007bff;"></i>
-               
-               <p class="card-text">সহজে আইসিটি-তে ভালো করতে চাও?
-                  আমাদের জার্নি শুরু হবে ক্লাস ৯ থেকে। খুব সাজানো এবং সহজ স্ট্যাডি প্লান পাবে কোর্স শুরুর প্রথম থেকেই। প্রতিটি টপিকের সহজ ব্যাখ্যা। থাকবে নোটস- যা উচ্চতর নম্বর পেতে সহায়তা করবে।   
-                   </p>
-                          </div>
-         </div>
-      </div>
-      
-      <!-- Graduate Programs -->
-      <div class="col-lg-4 col-md-6 mb-4">
-         <div class="card shadow-sm border-0">
-            <div class="card-body">
-               <i class="bi bi-person-check-fill" style="font-size: 3rem; color: #007bff;"></i>
-                           <p class="card-text">পারসোনালাইজড শিক্ষা কাঠামো
-                  আমরা জানি, সবাইকে এক পাল্লায় মাপলে শিক্ষার ক্ষেত্রে আসলে পিছিয়ে পড়ে সবাই। এজন্য তোমার বিষয় অনুধাবন ক্ষমতা, প্রয়োগ যোগ্যতা এবং সর্বোপরি তোমার আগ্রহ-এর উপর ভিত্তি করে আমরা ব্যাকএন্ড থেকে সাজাবো শুধু তোমার জন্য শিখন স্ট্র্যাটেজি।   </p>
-                          </div>
-         </div>
-      </div>
-      
-      <!-- Professional and Continuing Education -->
-      <div class="col-lg-4 col-md-6 mb-4">
-         <div class="card shadow-sm border-0">
-            <div class="card-body">
-               <i class="bi bi-laptop-fill" style="font-size: 3rem; color: #007bff;"></i>
-                   <p class="card-text">আমার স্বপ্ন আমি প্রোগ্রামার/ এনিমেটর হব 
-                  আমাদের প্রাথমিক লক্ষ্য হল, তোমার একাডেমিক রেজাল্ট। তোমার শিখন গতি এবং আগ্রহ মূল্যায়ন বিবেচনায় আমরাই তোমাকে স্বাগত জানাবো আমাদের ডিপ মাইন্ড কোর গ্রুপে, যারা স্কুল থেকেই পাইথন প্রোগ্রামিং বা গ্রাফিক্স/ এনিমেশনে স্কিল ডেভেলপ করতে চায়। এসব বিষয়ে ক্যারিয়ার গড়তে তুমি পাবে সিজনড মেন্টরস   </p>
-                </div>
-         </div>
-      </div>
-      <div class="col-lg-2 col-md-6 mb-4">
-      </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-         <div class="card shadow-sm border-0">
-            <div class="card-body">
-               <i class="bi bi-laptop-fill" style="font-size: 3rem; color: #007bff;"></i>
-                   <p class="card-text">আমার ল্যাপটপ/ কম্পিউটার নেই
-                  ডিজিটাল ডিভাইড আমাদের আশাহত করে। প্লিজ, আমাদের জানাও। একসাথে, উই উইল ফাইন্ড অউট সামথিং!  </p>
-             </div>
-         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-center ">
-         <div class="card shadow-sm border-0 d-flex justify-content-center">
-            <div class="card-body">
-               <i class="bi bi-laptop-fill" style="font-size: 3rem; color: #007bff;"></i>
-                    <p class="card-text">আমার আর্থিক সংগতি তেমন নেই 
-                  আমরা মনে করি না অর্থ কোন কাজকে আটকে রাখতে পারে। তোমার যদি শেখার অদম্য ইচ্ছা থাকে, আমাদের জানাও।  </p>
-                  </div>
-         </div>
-      </div>
-
-   </div>
-</section> {% endcomment %}
 
 <section class="program-section container">
-   {% comment %} <div class="text-start mb-5"> {% endcomment %}
-       {% comment %} <h2 class="font-weight-bold bangla1">এ এক দুর্দান্ত জার্নি</h2> {% endcomment %}
-       {% comment %} <p class="text-left bangla pt-0 mt-0">এমন সুযোগ আসলে কোথাও নেই। শুধু একাডেমিক রেজাল্ট ভালো নয়, চাইলে ক্যারিয়ার হিসেবে নিতে পাইথন বা গ্রাফিক্স ডিজাইনের জন্য আছে উন্মুক্ত পথ এবং হাতে কলমে শেখার অভূতপূর্ব সুযোগ </p> {% endcomment %}
-         {% comment %} </div> {% endcomment %}
+
 
    <div class="row bangla">
       <div class="text-start">
-         {% comment %} <h4> এ এক দুর্দান্ত জার্নি</h4> {% endcomment %}
+  
          <p class="h2 bangla1 text-dark"> এ এক দুর্দান্ত জার্নি </p>
          <p >এমন সুযোগ আসলে কোথাও নেই। শুধু একাডেমিক রেজাল্ট ভালো নয়, চাইলে ক্যারিয়ার হিসেবে নিতে পাইথন বা গ্রাফিক্স ডিজাইনের জন্য আছে উন্মুক্ত পথ এবং হাতে কলমে শেখার অভূতপূর্ব সুযোগ</p>
       </div>
@@ -215,124 +106,11 @@
    </div>
 </section>
 
-{% comment %} 
-<section id="programs" class="container py-5 bangla">
-   <h1 class="services_taital text-start bangla2 pt-4" style="padding-bottom: 40px;">
-      <span style="color:rgb(1, 0, 9)">এ এক দুর্দান্ত জার্নি 
-   </h1>
-         <p class="text-start bangla pt-0 mt-0">এমন সুযোগ আসলে কোথাও নেই। শুধু একাডেমিক রেজাল্ট ভালো নয়, চাইলে ক্যারিয়ার হিসেবে নিতে পাইথন বা গ্রাফিক্স ডিজাইনের জন্য আছে উন্মুক্ত পথ এবং হাতে কলমে শেখার অভূতপূর্ব সুযোগ </p>
-     </div>
-
-   <div class="row text-center">
-       <!-- Undergraduate Programs -->
-       <div class="col-lg-4 col-md-6 mb-4">
-           <div class="d-flex align-items-start">
-               <i class="bi bi-compass-fill text-danger fs-1 me-3"></i>
-               <div>
-                   <h4 class="fw-bold">সহজে আইসিটি-তে ভালো করতে চাও?</h4>
-                   <p class="text-muted">আমাদের জার্নি শুরু হবে ক্লাস ৯ থেকে। খুব সাজানো এবং সহজ স্ট্যাডি প্লান পাবে কোর্স শুরুর প্রথম থেকেই। প্রতিটি টপিকের সহজ ব্যাখ্যা। থাকবে নোটস- যা উচ্চতর নম্বর পেতে সহায়তা করবে।</p>
-               </div>
-           </div>
-       </div>
-
-       <!-- Graduate Programs -->
-       <div class="col-lg-4 col-md-6 mb-4">
-           <div class="d-flex align-items-start">
-               <i class="bi bi-person-check-fill text-danger fs-1 me-3"></i>
-               <div>
-                   <h4 class="fw-bold">পারসোনালাইজড শিক্ষা কাঠামো</h4>
-                   <p class="text-muted">আমরা জানি, সবাইকে এক পাল্লায় মাপলে শিক্ষার ক্ষেত্রে আসলে পিছিয়ে পড়ে সবাই। এজন্য তোমার বিষয় অনুধাবন ক্ষমতা, প্রয়োগ যোগ্যতা এবং সর্বোপরি তোমার আগ্রহ-এর উপর ভিত্তি করে আমরা ব্যাকএন্ড থেকে সাজাবো শুধু তোমার জন্য শিখন স্ট্র্যাটেজি।</p>
-               </div>
-           </div>
-       </div>
-
-       <!-- Professional and Continuing Education -->
-       <div class="col-lg-4 col-md-6 mb-4">
-           <div class="d-flex align-items-start">
-               <i class="bi bi-lightbulb-fill text-danger fs-1 me-3"></i>
-               <div>
-                   <h4 class="fw-bold">আমার স্বপ্ন আমি প্রোগ্রামার/ এনিমেটর হব</h4>
-                   <p class="text-muted">আমাদের প্রাথমিক লক্ষ্য হল, তোমার একাডেমিক রেজাল্ট। তোমার শিখন গতি এবং আগ্রহ মূল্যায়ন বিবেচনায় আমরাই তোমাকে স্বাগত জানাবো আমাদের ডিপ মাইন্ড কোর গ্রুপে, যারা স্কুল থেকেই পাইথন প্রোগ্রামিং বা গ্রাফিক্স/ এনিমেশনে স্কিল ডেভেলপ করতে চায়। এসব বিষয়ে ক্যারিয়ার গড়তে তুমি পাবে সিজনড মেন্টরস।</p>
-               </div>
-           </div>
-       </div>
-
-       <!-- No Laptop -->
-       <div class="col-lg-6 col-md-6 mb-4">
-           <div class="d-flex align-items-start">
-               <i class="bi bi-laptop-fill text-danger fs-1 me-3"></i>
-               <div>
-                   <h4 class="fw-bold">আমার ল্যাপটপ/ কম্পিউটার নেই</h4>
-                   <p class="text-muted">ডিজিটাল ডিভাইড আমাদের আশাহত করে। প্লিজ, আমাদের জানাও। একসাথে, উই উইল ফাইন্ড অউট সামথিং!</p>
-               </div>
-           </div>
-       </div>
-
-       <!-- Financial Limitations -->
-       <div class="col-lg-6 col-md-6 mb-4">
-           <div class="d-flex align-items-start">
-               <i class="bi bi-wallet2 text-danger fs-1 me-3"></i>
-               <div>
-                   <h4 class="fw-bold">আমার আর্থিক সংগতি তেমন নেই</h4>
-                   <p class="text-muted">আমরা মনে করি না অর্থ কোন কাজকে আটকে রাখতে পারে। তোমার যদি শেখার অদম্য ইচ্ছা থাকে, আমাদের জানাও।</p>
-               </div>
-           </div>
-       </div>
-   </div>
-</section> {% endcomment %}
-
-{% comment %} 
-
-<section id="programs" class="container py-5 bangla">
-   <div class="text-center mb-4">
-       <h2 class="fw-bold">এ এক দুর্দান্ত জার্নি</h2>
-       <p class="text-muted">এমন সুযোগ আসলে কোথাও নেই। শুধু একাডেমিক রেজাল্ট ভালো নয়, চাইলে ক্যারিয়ার হিসেবে নিতে পাইথন বা গ্রাফিক্স ডিজাইনের জন্য আছে উন্মুক্ত পথ এবং হাতে কলমে শেখার অভূতপূর্ব সুযোগ</p>
-   </div>
-
-   <div class="row text-center">
-       <!-- Undergraduate Programs -->
-       <div class="col-lg-4 col-md-6 mb-4">
-           <div class="d-flex align-items-start">
-               <i class="bi bi-compass-fill text-danger fs-1 me-3"></i>
-               <div>
-                   <h4 class="fw-bold">সহজে আইসিটি-তে ভালো করতে চাও?</h4>
-                   <p class="text-muted">আমাদের জার্নি শুরু হবে ক্লাস ৯ থেকে। খুব সাজানো এবং সহজ স্ট্যাডি প্লান পাবে কোর্স শুরুর প্রথম থেকেই। প্রতিটি টপিকের সহজ ব্যাখ্যা এবং নোটস- যা উচ্চতর নম্বর পেতে সহায়তা করবে।</p>
-               </div>
-           </div>
-       </div>
-
-       <!-- Graduate Programs -->
-       <div class="col-lg-4 col-md-6 mb-4">
-           <div class="d-flex align-items-start">
-               <i class="bi bi-flask-fill text-danger fs-1 me-3"></i>
-               <div>
-                   <h4 class="fw-bold">পারসোনালাইজড শিক্ষা কাঠামো</h4>
-                   <p class="text-muted">প্রত্যেক শিক্ষার্থী আলাদা। এজন্য তোমার বিষয় অনুধাবন ক্ষমতা এবং প্রয়োগ যোগ্যতার উপর ভিত্তি করে আমরা সাজাবো তোমার জন্য এক্সক্লুসিভ শেখার পরিকল্পনা।</p>
-               </div>
-           </div>
-       </div>
-
-       <!-- Professional & Continuing Education -->
-       <div class="col-lg-4 col-md-6 mb-4">
-           <div class="d-flex align-items-start">
-               <i class="bi bi-lightbulb-fill text-danger fs-1 me-3"></i>
-               <div>
-                   <h4 class="fw-bold">আমার স্বপ্ন আমি প্রোগ্রামার হব</h4>
-                   <p class="text-muted">আমরা তোমাকে স্বাগত জানাই ডিপ মাইন্ড কোর গ্রুপে, যারা স্কুল থেকেই প্রোগ্রামিং বা গ্রাফিক্স/ এনিমেশনে স্কিল ডেভেলপ করতে চায়।</p>
-               </div>
-           </div>
-       </div>
-   </div>
-</section>
- {% endcomment %}
-
-
 
 {% if teachers %}
 <div class="container">
 <h2 class="bangla1 h2 text-dark" style="margin-left: 0px; padding-bottom: 40px;">
   আমাদের শিক্ষকগণ
-       {% comment %} <p class="h2 bangla1 text-dark"> এ এক দুর্দান্ত জার্নি </p> {% endcomment %}
 </h2>
 </div>
 
@@ -359,19 +137,6 @@
 
 
 
-{% comment %} <head> {% endcomment %}
-   {% comment %} <meta charset="UTF-8"> {% endcomment %}
-   {% comment %} <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>ক্লাস ৯ আইসিটি - রোড টু প্রোগ্রামিং</title> {% endcomment %}
-   {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> {% endcomment %}
-   {% comment %} <style>
-       body { font-family: Arial, sans-serif; }
-       table { width: 100%; text-align: center; } {% endcomment %}
-       {% comment %} th, td { padding: 10px; border: 1px solid #dee2e6; } {% endcomment %}
-       {% comment %} .highlight { background-color: #f8f9fa; font-weight: bold; } {% endcomment %}
-   {% comment %} </style>
-</head>
-<body> {% endcomment %}
    <div class="container mt-4">
        <h2 class="text-center bangla1 mb-3">ক্লাস ৯ আইসিটি (রোড টু প্রোগ্রামিং / এনিমেশন)</h2>
        <table class="table table-bordered table-striped bangla">
@@ -402,8 +167,8 @@
        </table>
        <div class="text-center mt-3">
          <a class="bangla2" href="{% url "registration_page" %} "><button class="btn btn-danger mb-4">রেজিস্ট্রেশন কর এখনই </button> </a>
-           {% comment %} <div class="about_bt bangla2">রেজিস্ট্রেশন</a></div> {% endcomment %}
+ 
        </div>
    </div>
-{% comment %} </body> {% endcomment %}
+
 {% endblock %}
