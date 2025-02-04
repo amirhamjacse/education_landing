@@ -3,8 +3,24 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+
+
+
+
+{% comment %} <div class="container-fluid">
+    <div class="image_1">
+        <img src="{% static 'images/banner.jpeg' %}" alt="Banner Image">
+        <div class="banner-content">
+            <h2>Welcome to Our Django Project</h2>
+            <p>Build powerful applications with Django and Bootstrap.</p>
+            <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+    </div>
+</div> {% endcomment %}
+
+
 <div class="banner_section layout_padding header_section">
-   {% comment %} <div id="my_slider" class="carousel slide" data-ride="carousel"> {% endcomment %}
+
       <div class="carousel-inner">
          <div class="carousel-item active">
             <div class="container">
@@ -14,23 +30,20 @@
                         <h1 class="text-light bangla1 banner_taital"> যুক্ত হও দেশ সেরা সফটওয়্যার ইঞ্জিনিয়ার ও গ্রাফিক্স ডিজাইনাদের সাথে </h1> 
                           
                          <ul class="mt-3 text-light bangla" style="font-size: 16px">
-                            {% comment %} <li><i class="bi bi-arrow-right"></i> অনলাইন ক্লাস</li> {% endcomment %}
-                            {% comment %} <li><i class="bi bi-arrow-right"></i> যাদের ল্যাপটপ/ কম্পিউটার নেই তারাও জানাও।</li> {% endcomment %}
-                            <li><i class="bi bi-arrow-right"></i> ক্লাস ৯ থেকেই গড়ে তুলো আইসিটি-তে শক্ত ভিত </li>
-                            {% comment %} <li><i class="bi bi-arrow-right"></i> যাদের আর্থিক সংগতি নেই কিন্তু ডিপ বিউটিফুল মাইন্ড আছে তারাও জানাও।</li> {% endcomment %}
+                            <li class="h5"><i class="bi bi-arrow-right"></i> ক্লাস ৯ থেকেই গড়ে তুলো আইসিটি-তে শক্ত ভিত </li>
+                        
                         </ul>
                         <div class="btn_main">
                            <div class="about_bt bangla2"><a href="{% url "registration_page" %} ">রেজিস্ট্রেশন</a></div>
-                           {% comment %} <div class="quote_bt active"><a href="#">Free class</a></div> {% endcomment %}
                         </div>
                      </div>
                      <div class="col-md-6">
                         <div class="image_1"><img src="{% static 'images/img-1.png' %}"></div>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
-         </div>
+        </div>
+    </div>
          {% comment %} <div class="carousel-item">
             <div class="container">
                <div class="banner_taital_main">
@@ -316,9 +329,14 @@
 
 
 {% if teachers %}
-<h1 class="services_taital bangla1" style=" padding-bottom: 40px;">
-   <span style="color:rgb(1, 0, 9)">আমাদের শিক্ষকগণ
-</h1>
+<div class="container">
+<h2 class="bangla1 h2 text-dark" style="margin-left: 0px; padding-bottom: 40px;">
+  আমাদের শিক্ষকগণ
+       {% comment %} <p class="h2 bangla1 text-dark"> এ এক দুর্দান্ত জার্নি </p> {% endcomment %}
+</h2>
+</div>
+
+
 <section id="author-group" class="container">
    <div class="row text-center">
       {% for teacher in teachers %}
@@ -326,8 +344,8 @@
          <div class="author-card">
             <img src="{% if teacher.picture %} {{ teacher.picture.url }} {% endif %}" alt="{{ teacher.name }}" class="author-image rounded-circle mb-3">
             <h5 class="bangla1">{{ teacher.name }}</h5>
-            <p class="education bangla text-justify">{{ teacher.degree }}</p>
-            <p class="other-info bangla text-justify">{{ teacher.other_info }}             <a class="border-bottom bangla" href="{% url 'teacher_detail' pk=teacher.id %}" style="color: red; text-decoration: underline;">আরো পড়ুন..</a></p>
+            <p class="education bangla py-0 my-0">{{ teacher.degree }}</p>
+            <p class="other-info bangla p-0 m-0">{{ teacher.other_info }}             <a class="border-bottom bangla" href="{% url 'teacher_detail' pk=teacher.id %}" style="color: red; text-decoration: underline;">আরো পড়ুন..</a></p>
 
 
          </div>
@@ -357,10 +375,10 @@
    <div class="container mt-4">
        <h2 class="text-center bangla1 mb-3">ক্লাস ৯ আইসিটি (রোড টু প্রোগ্রামিং / এনিমেশন)</h2>
        <table class="table table-bordered table-striped bangla">
-           <thead class="table-dark">
+           <thead style="background-color: #dc3545;" class="table-danger text-light">
                <tr>
-                   <th>আইটেম</th>
-                   <th>সাধারণ</th>
+                   <th>সুবিধা</th>
+                   <th>প্রয়াস</th>
                    <th>প্রেরণা</th>
                    <th>অগ্রগামী</th>
                </tr>
@@ -379,11 +397,11 @@
                <tr><td>রোড টু প্রোগ্রামিং / এনিমেশন</td><td>না</td><td>হ্যাঁ</td><td>হ্যাঁ</td></tr>
                <tr><td>ডাউট সলভিংয়ে Q & A সেশন</td><td>১ ঘণ্টার মধ্যে</td><td>১৫ মিনিটের মধ্যে</td><td>তৎক্ষণাৎ</td></tr>
                <tr><td>মাসিক ফি</td><td>১,২০০</td><td>৩,০০০</td><td>১০,০০০</td></tr>
-               <tr class="highlight"><td>সীমিত সময়ের জন্য ৫০% ছাড় চলছে</td><td>৬০০</td><td>১,৫০০</td><td>-</td></tr>
+               <tr class="" style="background-color: #00008b; color: #ffff!important;"><td class="text-light">সীমিত সময়ের জন্য ৫০% ছাড় চলছে</td><td class="text-light">৬০০</td><td class="text-light">১,৫০০</td><td class="text-light">-</td></tr>
            </tbody>
        </table>
        <div class="text-center mt-3">
-         <a class="bangla2" href="{% url "registration_page" %} "><button class="btn btn-primary mb-4">রেজিস্ট্রেশন কর এখনই </button> </a>
+         <a class="bangla2" href="{% url "registration_page" %} "><button class="btn btn-danger mb-4">রেজিস্ট্রেশন কর এখনই </button> </a>
            {% comment %} <div class="about_bt bangla2">রেজিস্ট্রেশন</a></div> {% endcomment %}
        </div>
    </div>

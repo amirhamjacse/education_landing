@@ -39,7 +39,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             width: 250px;
-            height:450px;
+            height:400px;
             text-align: center;
           }
           @media (max-width: 768px) {
@@ -170,8 +170,36 @@
         table td {
             color: black;
         }
-         
-        
+        .about_bt a {
+         width: 100%;
+         float: left;
+         font-size: 18px;
+         color:rgb(255, 255, 255);
+         background-color: #dc3545;
+         text-align: center;
+         {% comment %} padding: 10px 0px; {% endcomment %}
+         border-radius: 40px;
+     }
+     
+     {% comment %} .image_1 {
+      position: relative;
+      width: 100%;
+  }
+  .image_1 img {
+      width: 100%;
+      height: auto;
+  }
+  .banner-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      {% comment %} padding: 20px; {% endcomment %}
+      text-align: center;
+      border-radius: 5px;
+  } {% endcomment %}
       </style>
    </head>
    <body>
@@ -208,12 +236,11 @@
                <div class="col-md-6 text-light">
                   {% comment %} <h1 class="text-light bangla"><b>ডিপ মাইন্ড স্কুল</b></h1> {% endcomment %}
                   <img src="{% static 'images/mainlogo.png' %}" alt="DeepMind School Logo" style="height: 60px;">
-                  <p class="footer_text bangla">প্রোগ্রামিং এবং গ্রাফিক্স শেখার জন্য প্ল্যাটফর্ম।</p>
+                  <p class="footer_text bangla">স্কুল ও কলেজ ছাত্রদের জন্য প্রোগ্রামিং (পাইথন) ও গ্রাফিক্স শেখার প্লাটফর্ম।</p>
                </div>
                <div class="col-md-6">
                 <h2 class="footer_taital text-light bangla text-center text-md-right">যোগাযোগ</h2>
                 <ul class="footer_links list-unstyled text-center text-md-right">
-                   <li><a class="text-light" href="#">+8801971247247</a></li>
                    <li><a class="text-light" href="#">info@deepmindacademy.com</a></li>
                    <li><a class="text-light" href="#">Dhaka, Bangladesh</a></li>
                 </ul>

@@ -5,7 +5,8 @@
         <div class="services_section layout_padding" style="padding-bottom: 50px;">
            <div class="container">
             {% comment %} {{form.as_p}} {% endcomment %}
-              <h1 class="services_taital bangla1"><span style="color:rgb(1, 1, 0)">রেজিস্ট্রেশন </h1>
+              {% comment %} <h1 class="services_taital bangla1"><span style="color:rgb(1, 1, 0)">রেজিস্ট্রেশন </h1> {% endcomment %}
+                <h2 class="bangla1 h2 text-dark ps-1"> রেজিস্ট্রেশন </h2>
                 
                 <div class="services_section_2">
                   {% if form.errors %}
@@ -29,7 +30,7 @@
                           <!-- First Name -->
                           <div class="col-md-6">
                               <div class="mb-3">
-                                  <label for="first_name" class="form-label text-dark">নামের প্রথম অংশ </label>
+                                  <label for="first_name" class="form-label text-dark">ছাত্র/ছাত্রীর নামের প্রথম অংশ </label>
                                   {{ form.first_name|add_class:"form-control"|attr:'required' }}
                               </div>
                           </div>
@@ -37,7 +38,7 @@
                           <!-- Last Name -->
                           <div class="col-md-6">
                               <div class="mb-3">
-                                  <label for="last_name" class="form-label text-dark">নামের শেষ অংশ</label>
+                                  <label for="last_name" class="form-label text-dark">ছাত্র/ছাত্রীর নামের শেষ অংশ</label>
                                   {{ form.last_name|add_class:"form-control" }}
                               </div>
                           </div>
@@ -61,42 +62,49 @@
                           <!-- Phone Number -->
                           <div class="col-md-6">
                               <div class="mb-3">
-                                  <label for="phone_number" class="form-label text-dark">মোবাইল নাম্বার </label>
+                                  <label for="phone_number" class="form-label text-dark">ছাত্র/ছাত্রীর মোবাইল নাম্বার (যদি থাকে) </label>
                                   {{ form.phone_number|add_class:"form-control"|attr:'required' }}
                               </div>
                           </div>
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="phone_number" class="form-label text-dark">অবিভাবক এর মোবাইল নাম্বার </label> <span class="text-danger">*</span>
+                                {% comment %} {{ form.phone_number|add_class:"form-control"|attr:'required' }} {% endcomment %}
+                            </div>
+                        </div>
+            
               
                           <!-- Email Address -->
                           <div class="col-md-6">
                               <div class="mb-3">
                                   <label for="email_address" class="form-label text-dark">ইমেইল</label>
-                                  {{ form.email_address|add_class:"form-control"|attr:'required' }}
+                                  {{ form.email_address|add_class:"form-control" }}
                               </div>
                           </div>
               
                           <!-- School -->
                           <div class="col-md-6">
                               <div class="mb-3">
-                                  <label for="school" class="form-label text-dark">স্কুলের নাম/প্রতিষ্ঠানের নাম</label>
+                                  <label for="school" class="form-label text-dark">শিক্ষা প্রতিষ্ঠান</label>
                                   {{ form.school|add_class:"form-control"|attr:'required' }}
                               </div>
                           </div>
               
                           <!-- District -->
-                          <div class="col-md-6">
-                              <div class="mb-3">
-                                  <label for="district" class="form-label text-dark">জেলা</label>
-                                  {{ form.district|add_class:"form-control"|attr:'required' }}
-                              </div>
-                          </div>
-              
+                          
                           <!-- Thana -->
                           <div class="col-md-6">
                               <div class="mb-3">
                                   <label for="upazila" class="form-label text-dark">উপজেলা/থানা</label>
                                   {{ form.upazila|add_class:"form-control"|attr:'required' }}
-                              </div>
-                          </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="district" class="form-label text-dark">জেলা</label>
+                                    {{ form.district|add_class:"form-control"|attr:'required' }}
+                                </div>
+                            </div>
               
                           <!-- Upazila -->
                           {% comment %} <div class="col-md-6">
@@ -112,7 +120,7 @@
                                <!-- Checkbox Field -->
                                {{ form.has_computer_laptop|add_class:"form-check-input custom-checkbox" }}
                                <label for="id_has_computer_laptop" class="form-check-label text-dark">
-                                   আমার কম্পিউটার আছে(থাকলে টিক দাও) 
+                                   আমার কম্পিউটার/ল্যাপটপ নাই
                                </label>
                            </div>
                         </div>
@@ -121,14 +129,14 @@
                              <!-- Checkbox Field -->
                              {{ form.can_manage_laptop|add_class:"form-check-input custom-checkbox" }}
                              <label for="id_has_computer_laptops" class="form-check-label text-dark">
-                                 আমি কম্পিউটার ম্যানেজ করতে পারবো
+                                 আমি কম্পিউটার/ল্যাপটপ ম্যানেজ করতে পারবো
                              </label>
                          </div>
                          </div>
               
                           <!-- Submit Button -->
                           <div class="col-12 text-end">
-                            <button type="submit" class="btn btn-primary" style="padding: 12px 24px; font-size: 1.25rem;">সাবমিট</button>
+                            <button type="submit" class="btn btn-danger" style="padding: 12px 24px; font-size: 1.25rem;">সাবমিট</button>
                         </div>
                         
                       </div>
@@ -140,24 +148,22 @@
         </div>
 
 
-        <h1 class="services_taital bangla1"><span style="color:rgb(4, 3, 0)">আমাদের নীতি</span></h1>
-
+        {% comment %} <h1 class="services_taital bangla1"><span style="color:rgb(4, 3, 0)"></span></h1> {% endcomment %}
 
         <section class="container py-5 bangla">
+            <p class="bangla1 h2 text-dark p-0 m-0"> আমাদের নীতি </p>
             <div class="row">
-                <div class="col-md-8 mx-auto text-center">
-                    <p class="text-muted">আমরা স্বচ্ছতা রক্ষা এবং সেবার সর্বোচ্চ মান বজায় রাখার প্রতিশ্রুতি প্রদান করি।</p>
+                <div class="text-start">
+                    <p class="py-1 my-1">আমরা স্বচ্ছতা রক্ষা এবং সেবার সর্বোচ্চ মান বজায় রাখার প্রতিশ্রুতি প্রদান করি।</p>
                 </div>
             </div>
-            <div class="row mt-4">
-                <div class="col-md-6 mx-auto pb-4">
-                    <ol class="list-group list-group-flush">
-                        <li class="list-group-item">{% block policy_rule_1 %}আপনার ডেটা নিরাপদভাবে সংরক্ষিত থাকে এবং কখনই শেয়ার করা হয় না।{% endblock %}</li>
-                        <li class="list-group-item">{% block policy_rule_2 %}ফিরতি প্রক্রিয়া ৭ কার্যদিবসের মধ্যে সম্পন্ন হয়।{% endblock %}</li>
-                        <li class="list-group-item">{% block policy_rule_3 %}সকল সেবার জন্য শর্তাবলী প্রযোজ্য।{% endblock %}</li>
-                        <li class="list-group-item">{% block policy_rule_4 %}গ্রাহক সেবা ২৪/৭ উপলব্ধ।{% endblock %}</li>
-                    </ol>
-                </div>
+          
+                    <div class="">
+                        <div class="list-grup-item">{% block policy_rule_1 %}আপনার ডেটা নিরাপদভাবে সংরক্ষিত থাকে এবং কখনই শেয়ার করা হয় না।{% endblock %}</div>
+                        <div class="list-grup-item">{% block policy_rule_2 %}ফিরতি প্রক্রিয়া ২৪ ঘন্টার মধ্যে সম্পন্ন হয়।{% endblock %}</div>
+                        <div class="list-grop-item">{% block policy_rule_3 %}সকল সেবার জন্য শর্তাবলী প্রযোজ্য।{% endblock %}</div>
+                        <div class="list-grop-item">{% block policy_rule_4 %}গ্রাহক সেবা ২৪ ঘন্টা।{% endblock %}</div>
+                    </div>
             </div>
         </section>
         
